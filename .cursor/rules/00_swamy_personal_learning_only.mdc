@@ -1,14 +1,14 @@
 ---
-description: This repo is Swamy’s personal learning only — not for others as courseware
+description: This repo is Swamy's personal learning only — not for others as courseware
 globs: *
 alwaysApply: true
 ---
 
 # Swamy-only personal learning
 
-This repository (`t2-machine-learning`) is **Swamy PKV’s personal learning workspace**.
+This repository (`webrtc-engineering`) is **Swamy PKV's personal learning workspace**.
 
-1. **Only Swamy’s learning** — artifacts support his machine-learning foundations and from-scratch algorithm study; they are not institutional or third-party curriculum.
+1. **Only Swamy's learning** — artifacts support his WebRTC engineering study and hands-on practice; they are not institutional or third-party curriculum.
 2. **Not for anyone else** — do not edit copy to welcome a general audience, imply shared courseware, or invite others to treat this as tutorials, templates, or authoritative reference material.
 
 ## Do
@@ -18,4 +18,4 @@ This repository (`t2-machine-learning`) is **Swamy PKV’s personal learning wor
 ## Do not
 
 - Soften or remove the personal-only stance unless Swamy explicitly requests it.
-- Replace “Swamy only” framing with “students,” “learners,” or open-education language.
+- Replace "Swamy only" framing with "students," "learners," or open-education language.

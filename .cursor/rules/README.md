@@ -1,8 +1,8 @@
 ---
 title: Cursor Rules Index
 version: 1.0
-last_updated: 2026-01-27
-project: Machine Learning Algorithms from Scratch (M.Sc. DSAI)
+last_updated: 2026-06-03
+project: WebRTC Engineering
 ---
 
 # Cursor Rules
@@ -11,7 +11,10 @@ This folder contains the Cursor rule files (`.mdc`) used to guide edits in this 
 
 ---
 
-## 📋 Rule Files
+## Rule Files
+
+### `00_swamy_personal_learning_only.mdc`
+Swamy-only personal learning scope (always apply)
 
 ### `01_educational-content-rules.mdc`
 Core principles and the mandatory zero-copy policy

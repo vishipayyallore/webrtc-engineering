@@ -1,37 +1,40 @@
 ---
-description: Quality assurance standards for code and notebooks
-globs: *.py, *.ipynb
+description: Quality assurance standards for code and implementations
+globs: *.py, *.js, *.ts, *.html
 ---
 # Quality Assurance
 
 ## Code Quality Checklist
 
-### Python Scripts (`src/`)
+### JavaScript/TypeScript (`src/**/03-implementations/`)
+- [ ] Runs on localhost or HTTPS as required by the browser APIs used.
+- [ ] Clear error handling for getUserMedia, RTCPeerConnection, and signaling failures.
+- [ ] No hardcoded TURN credentials or API keys.
+- [ ] Comments explain WebRTC steps, not just syntax.
+
+### Node.js signaling servers
+- [ ] Documented start command and required environment variables.
+- [ ] WebSocket/Socket.IO message types documented.
+- [ ] Graceful shutdown and connection cleanup where applicable.
+
+### Python Scripts (`tools/pyscripts/`)
 - [ ] Follows PEP 8 style guide.
-- [ ] Type hints used for function arguments and return types.
-- [ ] Docstrings included for all functions and classes.
+- [ ] Type hints used for function arguments and return types where practical.
 - [ ] No hardcoded paths (use `pathlib` or relative paths).
 
-### Jupyter Notebooks (`src/weekN/03-notebooks/`)
-- [ ] **Kernel Restart & Run All** passes without errors.
-- [ ] Logical flow: Import -> Load Data -> Implement Algorithm -> Train -> Evaluate -> Visualize.
-- [ ] No hidden state (variables defined in deleted cells).
-- [ ] Markdown cells clearly explain the steps.
-- [ ] Visualizations have titles, labels, and legends.
-
-## Algorithm Implementation Checklist
-- [ ] Algorithm implemented from scratch (not using sklearn directly).
-- [ ] Mathematical correctness verified.
-- [ ] Hyperparameters clearly documented.
-- [ ] Performance metrics calculated and displayed.
+## WebRTC Implementation Checklist
+- [ ] Signaling sequence (offer/answer, ICE candidates) matches the documented flow.
+- [ ] Media tracks and peer connection lifecycle handled correctly (add/remove, close).
+- [ ] STUN/TURN configuration documented when NAT traversal is involved.
+- [ ] Browser compatibility notes included where relevant.
 
 ## Content Review Checklist (Zero-Copy)
 - [ ] **Originality Check**: Verify that text is not a direct copy from source material.
 - [ ] **Synthesis**: Ensure content represents a synthesized understanding, not just rephrasing.
-- [ ] **Citations**: Check that algorithms and specific claims are cited.
+- [ ] **Citations**: Check that RFC sections and specific claims are cited.
 
 ## Documentation Quality
-- README.md must match actual implementation.
+- README.md must match actual implementation layout.
 - Usage guides must be accurate.
-- Code comments explain algorithm logic and concepts.
-- Mathematical formulas correctly formatted (LaTeX in notebooks).
+- Code comments explain WebRTC logic and protocol steps.
+- Signaling and topology diagrams match the described behavior.

@@ -2,7 +2,7 @@
 
 ## Repository
 
-**t2-machine-learning** — academic learning workspace for the M.Sc. DSAI program (Term 2). Python, Jupyter, from-scratch implementations. **Not** a web application or production system.
+**webrtc-engineering** — personal learning workspace for WebRTC fundamentals through production-grade real-time communication systems. JavaScript/TypeScript, Node.js, browser APIs. **Not** a deployed production platform (though it includes production-oriented study material).
 
 ## Non-negotiable: Swamy only
 
@@ -10,7 +10,7 @@ This repository is **Swamy PKV's personal learning** material. It is **not** mai
 
 ## Learning layout (this repo)
 
-Companion artifacts follow the **four-layer** pattern in `.github/copilot-instructions.md`, organized by week under `src/weekN/` (`01-notes/`, `02-quizzes/`, `03-notebooks/`, `04-discussions/`).
+Companion artifacts follow the **four-layer topic module** pattern in `.github/copilot-instructions.md`, organized by category and topic under `src/` (`01-notes/`, `02-exercises/`, `03-implementations/`, `04-discussions/` within each topic folder). See `docs/01-repository-structure.md`.
 
 ## Agent skills (`SKILL.md`)
 
@@ -21,7 +21,7 @@ Bundled on-demand procedures live under `.github/skills/` (mirrored at `.cursor/
 **Custom subagents** live under **`.cursor/agents/`** (YAML frontmatter + instructions). Cursor uses them for delegated tasks with a **fresh context** (for example CI verification or a single-topic audit). The same files are **mirrored** at **`.github/agents/`** for visibility in Git; keep both trees identical when editing.
 
 - **Index and how this fits `CLAUDE.md`:** **`docs/agent-subagents.md`**
-- **Invocation:** natural language ("use the ml-ci-verify subagent") or `/ml-ci-verify` when supported.
+- **Invocation:** natural language ("use the webrtc-ci-verify subagent") or `/webrtc-ci-verify` when supported.
 
 **Claude Code** reads this **`CLAUDE.md`** as the project entry point; for Claude-native agent files, vendors document **`.claude/agents/`**. This repo does not create that folder unless you add it for CLI use — copy from `.cursor/agents/` if needed.
 
@@ -45,29 +45,31 @@ Assistant behaviour is defined under `.github/copilot-instructions.md`, `.cursor
 
 ## Key rules (summary)
 
-- **Plain English or worked example**: For each taught concept, include simple plain English or a worked example; pair equations with words. Follow `.cursor/rules/01_educational-content-rules.mdc`.
+- **Plain English or worked example**: For each taught concept, include simple plain English or a worked example; pair protocol diagrams with words. Follow `.cursor/rules/01_educational-content-rules.mdc`.
 - **Zero-copy / voice**: Follow `.cursor/rules/01_educational-content-rules.mdc` and related rules.
 - **Source material**: Internal-only `source-material/` tree; never reference in public docs (see copilot instructions).
 
 ## Environment
 
 ```powershell
+# Node.js demos (per implementation folder)
+npm install
+npm start
+
+# Python tools
 $Env:UV_LINK_MODE = "copy"
 uv sync
-jupyter notebook
 ```
 
 ## CI checks (run locally)
 
-Aligned with `.github/workflows/ci-python.yml` and `.github/workflows/ci-documentation.yml`. Full detail: `.github/skills/ci-checks/SKILL.md`.
+Aligned with `.github/workflows/ci-python.yml` (tools Python) and `.github/workflows/ci-documentation.yml`. Full detail: `.github/skills/ci-checks/SKILL.md`.
 
-```bash
+```powershell
 uv sync
-uv run isort --check-only --diff src/
-uv run black --check --line-length 127 --target-version py312 src/
-uv run flake8 src/ --count --select=E9,F63,F7,F82 --show-source --statistics
-uv run flake8 src/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-uv run python -c "import json,glob; [json.load(open(p,encoding='utf-8')) for p in glob.glob('src/**/*.ipynb', recursive=True)]"
+uv run isort --check-only --diff tools/pyscripts/
+uv run black --check --line-length 127 --target-version py312 tools/pyscripts/
+uv run flake8 tools/pyscripts/ --count --select=E9,F63,F7,F82 --show-source --statistics
 npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/**/*.md" "tools/**/*.md"
 ```
 
@@ -81,7 +83,7 @@ Optional link check (Docker, from repo root): `docker run --rm -v "${PWD}:/works
 | `docs/agent-skills.md` | SKILL.md pattern, progressive disclosure, skills mirror |
 | `.github/skills/topic-companions/SKILL.md` | Four-layer topic SOP, parity, definition of done (mirrored under `.cursor/skills/`) |
 | `docs/agent-governance-recovery.md` | Keep governance uncorrupted (primary); Git restore bundle (secondary) |
-| `docs/01_repository-structure.md` | Structural single source of truth |
+| `docs/01-repository-structure.md` | Structural single source of truth |
 | `.github/copilot-instructions.md` | Canonical Copilot / agent instructions |
 | `tools/README.md` | Index of repo-local helpers (`pyscripts/`, `psscripts/`) |
 | `.github/prompts/task-prompt.md` | Structured audit template |
@@ -90,11 +92,11 @@ Optional link check (Docker, from repo root): `docker run --rm -v "${PWD}:/works
 | `.cursor/rules/00_swamy_personal_learning_only.mdc` | Swamy-only scope (always apply) |
 | `.cursor/rules/01_educational-content-rules.mdc` | Zero-copy, voice, four-layer companions |
 | `.cursor/rules/02_repository-structure.mdc` | Repository layout and naming |
-| `.cursor/rules/03_quality-assurance.mdc` | QA checklists for `src/` and notebooks |
+| `.cursor/rules/03_quality-assurance.mdc` | QA checklists for `src/` and implementations |
 | `.cursor/rules/04_markdown-standards.mdc` | Markdown structure for authored `.md` |
 | `.cursor/rules/05_primary-directives.mdc` | Primary project directives |
 | `.cursor/rules/06_source_material_rules.mdc` | `source-material/` — never named in public docs |
-| `.cursor/rules/07_file-naming-conventions.mdc` | Week-based folder naming, kebab-case file naming conventions |
+| `.cursor/rules/07_file-naming-conventions.mdc` | Topic-based folder naming, kebab-case file naming |
 | `.cursor/rules/08_copilot-instructions-extract.mdc` | Condensed Copilot guardrails |
 | `.cursor/skills.md` | Bundled skills pointer |
 | `.github/skills/` | Canonical agent skills; mirrored at `.cursor/skills/` |

@@ -1,5 +1,5 @@
 @{
-  RepoName = 't2-machine-learning'
+  RepoName = 'webrtc-engineering'
 
   ExpectedFolders = @(
     '.copilot'

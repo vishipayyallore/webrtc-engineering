@@ -30,11 +30,11 @@ Get-ChildItem $cRoot -Recurse -Filter SKILL.md | ForEach-Object {
 
 | Folder | Purpose |
 |--------|---------|
-| `t2-machine-learning` | Domain context for this repository |
+| `webrtc-engineering` | Domain context for this repository |
 | `topic-companions` | Four-layer topic SOP, parity, definition of done |
 | `ci-checks` | Local commands aligned with `.github/workflows/ci-*.yml` |
-| `docs-verification` | Markdown / four-layer bundle checks vs `docs/01_repository-structure.md` |
+| `docs-verification` | Markdown / four-layer bundle checks vs `docs/01-repository-structure.md` |
 | `workspace-review` | Full audit checklist for this educational repo |
-| `e2e-testing` | Smoke checks (env, notebook parse, optional manual run) |
+| `e2e-testing` | Smoke checks (env, lint, optional demo run) |
 
 **CI:** Pushes that touch skills run `.github/workflows/ci-skills-parity.yml`; agent docs changes also run `.github/workflows/ci-agent-docs-guard.yml`.

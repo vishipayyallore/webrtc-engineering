@@ -6,6 +6,12 @@ This repository documents my journey from WebRTC fundamentals to production-grad
 
 ---
 
+## Scope (read this first)
+
+This repository is **Swamy PKV's personal learning workspace only**. It is **not** courseware, a tutorial site, or material maintained for other learners. Content is written in a first-person learning voice for my own revision and practice. Do not reframe it for a general audience unless I explicitly ask.
+
+---
+
 ## Objectives
 
 * Understand WebRTC architecture and protocols
@@ -116,7 +122,16 @@ This repository documents my journey from WebRTC fundamentals to production-grad
 
 ## Repository Structure
 
-Refer to the repository structure section below.
+See [docs/01-repository-structure.md](docs/01-repository-structure.md) for the full tree.
+
+Each topic under `src/` follows a **four-layer module** pattern:
+
+| Layer | Folder | Purpose |
+|-------|--------|---------|
+| 1 | `01-notes/` | Theory and first-person learning notes |
+| 2 | `02-exercises/` | Self-assessment (original synthesis only) |
+| 3 | `03-implementations/` | Runnable demos and servers |
+| 4 | `04-discussions/` | Worked examples and architecture walkthroughs |
 
 ---
 

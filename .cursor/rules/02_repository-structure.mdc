@@ -1,26 +1,24 @@
-description: Repository structure for Machine Learning Algorithms from Scratch
+description: Repository structure for WebRTC Engineering
 globs: *
 ---
 # Repository Structure
 
-**Project**: Machine Learning Algorithms from Scratch (M.Sc. DSAI)
+**Project**: WebRTC Engineering (personal learning workspace)
 
-> **Single Source of Truth**: For the complete and detailed repository structure, naming conventions, and workflow standards, refer to [docs/01_repository-structure.md](../../docs/01_repository-structure.md).
+> **Single Source of Truth**: For the complete and detailed repository structure, naming conventions, and workflow standards, refer to [docs/01-repository-structure.md](../../docs/01-repository-structure.md).
 
 ## Quick Summary
 
-- **`src/weekN/01-notes/`**: Theory and notes for that week.
-- **`src/weekN/02-quizzes/`**: Self-assessment for that week.
-- **`src/weekN/03-notebooks/`**: From-scratch implementation notebooks for that week.
-- **`src/weekN/04-discussions/`**: Worked examples and discussion scenarios for that week.
-- **`src/`**: Also houses reusable Python code alongside the week folders.
-- **`tools/`**: Maintenance scripts and helper utilities.
-- **`docs/`**: Structure guides, agent docs, and reviews.
+- **`src/NN-category/topic-name/`**: Topic modules grouped by learning area (fundamentals, signaling, networking, etc.).
+- **Four layers per topic**: `01-notes/`, `02-exercises/`, `03-implementations/`, `04-discussions/`.
+- **`docs/`**: Architecture notes, RFC summaries, diagrams, agent docs, and reviews.
+- **`experiments/`**: Bandwidth, codec, and load-testing experiments.
+- **`assets/`**: Images, diagrams, and media assets.
+- **`tools/`**: Maintenance scripts (`pyscripts/`, `psscripts/`).
 
-When writing or updating public-facing structure (for example `README.md` or `docs/01_repository-structure.md`), do not list or mention any internal-only paths.
+When writing or updating public-facing structure (for example `README.md` or `docs/01-repository-structure.md`), do not list or mention any internal-only paths.
 
 ## Preserved archives
 
 - `.archive/` contains old category-based learning content. Leave it as preserved legacy material unless Swamy explicitly asks to migrate or clean it.
-- `source-material/.archive/` contains raw/reference algorithm material. Treat it as read-only source material and leave it as-is unless Swamy explicitly asks for a topic migration.
-- Routine parity, docs, and CI reviews should focus on active `src/weekN/` content and should not treat either archive as a required active layer.
+- Routine parity, docs, and CI reviews should focus on active `src/` topic modules and governance/tooling consistency.

@@ -1,11 +1,11 @@
 # Agent instructions (index)
 
-This repository is an Applied Engineering workspace for practical notes,
+This repository is an Applied Engineering workspace for practical WebRTC notes,
 experiments, documentation, automation, and reference implementations.
 
 ## Scope
 
-Applies to: code changes, documentation edits, quizzes, notebooks, and automation inside this repo. Does **not** apply to external repos, one-off shell sessions, or anything outside `d:\msc-dsai\t2-machine-learning\`.
+Applies to: code changes, documentation edits, exercises, demos, and automation inside this repo. Does **not** apply to external repos, one-off shell sessions, or anything outside `d:\GitHub\webrtc-engineering\`.
 
 ## Read first
 

@@ -1,42 +1,43 @@
 ---
-description: Primary directives for Machine Learning Algorithms from Scratch
+description: Primary directives for WebRTC Engineering
 globs: *
 ---
 # Primary Directives
 
 ## Project Focus
 
-This is an **Academic Learning Workspace** for Machine Learning Algorithms that:
-- Implements ML algorithms from scratch in Python
-- Provides clear, structured notes in Markdown/LaTeX
-- Uses Jupyter Notebooks for interactive learning
-- Prioritizes algorithmic understanding and implementation
+This is a **Personal Learning Workspace** for WebRTC Engineering that:
+
+- Builds hands-on browser demos and signaling servers in JavaScript/TypeScript
+- Provides clear, structured notes in Markdown on WebRTC concepts and protocols
+- Explores media pipelines, ICE/STUN/TURN, and SFU/MCU architectures
+- Prioritizes protocol understanding and runnable implementations
 
 ### Educational Philosophy
-- **Educational first**: Prioritize clarity, correctness, and explainability over performance.
+
+- **Educational first**: Prioritize clarity, correctness, and explainability over premature optimization.
 - **Beginner friendly**: Default to beginner-friendly explanations before advanced phrasing.
-- **Business grounded**: When teaching a concept, try to connect it to a realistic business use case so the practical value is obvious.
-- **Layman explanation**: Use everyday language before formulas, ML jargon, or implementation detail.
-- **Equations**: Pair every display-math block with a plain-English line and a numeric walkthrough when helpful.
-- **Diagrams**: Use Mermaid diagrams with ASCII fallbacks wherever a visual explanation is applicable.
-- **From scratch mindset**: Implement algorithms from first principles; avoid heavy abstractions.
+- **Real-world grounded**: When teaching a concept, connect it to realistic use cases (video calls, telehealth, contact centers, live streaming).
+- **Layman explanation**: Use everyday language before WebRTC jargon or implementation detail.
+- **Diagrams**: Use Mermaid diagrams with ASCII fallbacks for signaling flows, ICE states, and topology comparisons.
+- **Hands-on mindset**: Prefer runnable demos and small servers over abstract-only notes.
 - **Document intent**: Update docs when structure, behavior, or learning flow changes.
 
 ## Current State
 
-- ✅ Active Learning: Ongoing course (M.Sc. DSAI)
-- ✅ Tech Stack: Python, Jupyter, NumPy, Pandas, Matplotlib, Seaborn, scikit-learn (for comparison)
-- ❌ NOT a Web Application: No Flask, Django, or React.
-- ❌ NOT a Production System: Code is for educational and practice purposes.
+- ✅ Active Learning: Ongoing WebRTC engineering study
+- ✅ Tech Stack: WebRTC, JavaScript, TypeScript, Node.js, Express, Socket.IO, Coturn, Docker
+- ✅ Python tools: Maintenance scripts under `tools/pyscripts/` only
+- ❌ NOT a Production Deployment: Code is for learning and experimentation unless explicitly marked otherwise.
 
 ## Documentation Accuracy
 
-- Notes must accurately reflect algorithm theory.
-- Formulas must be correctly formatted in LaTeX.
-- Code comments should explain the *why* of the algorithm step, not just the *how* of the Python code.
+- Notes must accurately reflect WebRTC protocol behavior and architecture trade-offs.
+- Signaling sequence diagrams must match the described offer/answer and ICE flow.
+- Code comments should explain the *why* of WebRTC steps, not just the *how* of the API call.
 
 ## Code Maintenance
 
-- Notebooks should be reproducible (Restart Kernel & Run All should work).
-- Separate reusable logic into `src/` modules where appropriate.
-- Use strict typing in Python scripts (`src/`) but relax it in Notebooks for exploration.
+- Browser demos should run on localhost or HTTPS as required by the APIs used.
+- Separate reusable logic into modules within `03-implementations/` where appropriate.
+- Use TypeScript for non-trivial implementations when the topic folder already uses it.

@@ -9,11 +9,11 @@ globs: source-material/*
 
 ## Archive carve-out
 
-- `source-material/.archive/` is preserved raw/reference algorithm material. Leave it as-is unless Swamy explicitly asks for a specific migration.
-- Do **not** count `source-material/.archive/` as active week content or as an automatic migration gap during routine workspace reviews.
-- When Swamy asks to migrate an archived topic, read it as reference only and create fresh zero-copy four-layer content under `src/weekN/`.
+- `.archive/` is preserved legacy content. Leave it as-is unless Swamy explicitly asks for a specific migration.
+- Do **not** count `.archive/` as active topic content or as an automatic migration gap during routine workspace reviews.
+- When Swamy asks to migrate archived content, read it as reference only and create fresh zero-copy four-layer content under the appropriate `src/` topic module.
 
-## 🚫 Critical Restrictions
+## Critical Restrictions
 
 ### Read-Only Policy
 
@@ -34,16 +34,16 @@ globs: source-material/*
 - For `.pdf` / `.pptx` conversion jobs, create output files **inside the same `source-material` path tree** as the input source file.
 - Keep source and extraction artifacts colocated within `source-material/` for traceability.
 
-## 🔄 Migration Workflow
+## Migration Workflow
 
 When migrating content from `source-material/`:
 
 1. **Read** from `source-material/` to understand concepts
 2. **Synthesize** - Rewrite in your own words (NO copy-paste)
-3. **Publish** to educational folders (`src/weekN/01-notes/`, `src/weekN/02-quizzes/`, `src/weekN/03-notebooks/`, `src/weekN/04-discussions/`, `docs/`, `src/`)
-4. **Cite** when using specific algorithms/theorems
+3. **Publish** to educational folders (`src/**/01-notes/`, `src/**/02-exercises/`, `src/**/03-implementations/`, `src/**/04-discussions/`, `docs/`)
+4. **Cite** when using specific RFC sections, API definitions, or course claims
 
-## ✅ Zero-Copy Policy
+## Zero-Copy Policy
 
 ### Good Synthesis (Accepted):
 
@@ -61,7 +61,7 @@ When migrating content from `source-material/`:
 
 **Reference**: See `01_educational-content-rules.mdc` for detailed zero-copy policy.
 
-## 📁 Purpose
+## Purpose
 
 The `source-material/` folder is a staging area for:
 
@@ -73,7 +73,7 @@ The `source-material/` folder is a staging area for:
 
 These materials remain **untouched** and serve as **permanent references** while you create **original, synthesized educational content** in the proper folders.
 
-## ⚠️ Enforcement
+## Enforcement
 
 - Reviewers must reject any PRs that modify or delete files in `source-material/`
 - AI assistants must refuse requests to edit, overwrite, or delete content in `source-material/`
