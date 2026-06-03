@@ -416,7 +416,7 @@ notebook["cells"].append({
         "    \n",
         "    # Assign cluster labels\n",
         "    labels = np.zeros(n, dtype=int)\n",
-        "    for cluster_id, (cluster_label, point_indices) in enumerate(clusters.items()):\n",
+        "    for cluster_label, point_indices in enumerate(clusters.values()):\n",
         "        for point_idx in point_indices:\n",
         "            labels[point_idx] = cluster_label\n",
         "    \n",
