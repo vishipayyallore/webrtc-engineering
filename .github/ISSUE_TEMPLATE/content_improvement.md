@@ -12,16 +12,16 @@ A clear description of the content improvement you'd like to see.
 
 ## Content Type
 
-- [ ] Week Notes (`src/weekN/01-notes/`)
-- [ ] Week Quiz (`src/weekN/02-quizzes/`)
-- [ ] Notebook (`src/weekN/03-notebooks/`)
-- [ ] Week Discussion (`src/weekN/04-discussions/`)
+- [ ] Topic Notes (`src/**/01-notes/`)
+- [ ] Topic Exercise (`src/**/02-exercises/`)
+- [ ] Implementation / Demo (`src/**/03-implementations/`)
+- [ ] Topic Discussion (`src/**/04-discussions/`)
 - [ ] Documentation (`docs/`, `README.md`)
 - [ ] Code Comments
 
 ## Current Content
 
-**File**: `path/to/file.md` or `path/to/file.ipynb`
+**File**: `path/to/file.md` or `path/to/demo/index.html`
 
 **Section**: (if applicable)
 
@@ -43,4 +43,4 @@ Any other information, examples, or references that would help.
 
 ---
 
-**Note**: This repository is Swamy PKV's personal Machine Learning study workspace. Suggestions should match the current week-based four-layer structure.
+**Note**: This repository is Swamy PKV's personal WebRTC study workspace. Suggestions should match the current topic-based four-layer structure.

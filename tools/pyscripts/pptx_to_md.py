@@ -1,8 +1,8 @@
 """PPTX → Markdown converter (raw extraction).
 
 This script is meant to help *extract* slide text/tables/images into Markdown so that
-Swamy can then *synthesize* proper learning notes in `src/weekN/01-notes/`,
-`src/weekN/03-notebooks/`, and related week companions without violating the repo's
+Swamy can then *synthesize* proper learning notes in `src/**/01-notes/`,
+`src/**/03-implementations/`, and related topic companions without violating the repo's
 Zero-Copy Policy.
 
 Design goals:
@@ -167,7 +167,7 @@ def convert_pptx_to_markdown(
     lines.append("")
     lines.append(
         "> This is an automated extraction from a PPTX for personal study. "
-        "Please **synthesize** into original notes before publishing to `src/weekN/01-notes/` "
+        "Please **synthesize** into original notes before publishing to `src/**/01-notes/` "
         "to respect the repository's Zero-Copy Policy."
     )
 

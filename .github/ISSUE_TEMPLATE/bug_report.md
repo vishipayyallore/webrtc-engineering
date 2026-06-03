@@ -14,7 +14,7 @@ A clear and concise description of what the bug is.
 
 **File(s) affected**:
 
-- `path/to/file.md` or `path/to/file.ipynb`
+- `path/to/file.md` or `path/to/demo/index.html`
 
 **Section(s) affected**:
 
@@ -22,8 +22,8 @@ A clear and concise description of what the bug is.
 
 ## Steps to Reproduce
 
-1. Open Notebook '...'
-2. Run cell number '...'
+1. Open demo or notes at '...'
+2. Follow steps '...'
 3. See error
 
 ## Expected Behavior
@@ -40,7 +40,7 @@ If applicable, add screenshots to help explain your problem.
 
 ## Additional Context
 
-- **Component**: [Notebook / Reading Notes / Python Script / Documentation / Other]
+- **Component**: [Browser Demo / Signaling Server / Reading Notes / Documentation / Other]
 - **Severity**: [Low / Medium / High]
 - **Impact**: How does this affect the learning experience?
 
@@ -50,4 +50,4 @@ If you have a suggestion for how to fix this, please describe it here.
 
 ---
 
-**Note**: This repository is for Machine Learning Algorithms from Scratch. Bug reports help improve the learning experience for everyone.
+**Note**: This repository is Swamy PKV's personal WebRTC study workspace. Bug reports help improve my learning experience.

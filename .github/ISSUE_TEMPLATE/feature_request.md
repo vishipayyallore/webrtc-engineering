@@ -50,16 +50,15 @@ Why is this feature valuable?
 
 Where should this feature be implemented?
 
-- `src/weekN/01-notes/<topic>.md`
-- `src/weekN/02-quizzes/<topic>-quiz.md`
-- `src/weekN/03-notebooks/<topic>-implementation.ipynb`
-- `src/weekN/04-discussions/<topic>-discussion.md`
-- `src/algorithm_name.py`
+- `src/NN-category/topic-name/01-notes/<topic>.md`
+- `src/NN-category/topic-name/02-exercises/<topic>-exercise.md`
+- `src/NN-category/topic-name/03-implementations/<demo>/`
+- `src/NN-category/topic-name/04-discussions/<topic>-discussion.md`
 - Specific file or folder
 
 ## Related Content
 
-- Does this relate to existing algorithms?
+- Does this relate to existing WebRTC topics?
 - What dependencies are needed?
 - What does this enable?
 
@@ -69,4 +68,4 @@ Any other information, examples, or references that would help.
 
 ---
 
-**Note**: This repository is Swamy PKV's personal Machine Learning study workspace. Feature requests should align with the current week-based four-layer structure.
+**Note**: This repository is Swamy PKV's personal WebRTC study workspace. Feature requests should align with the current topic-based four-layer structure.

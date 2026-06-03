@@ -1,39 +1,40 @@
 ---
 name: e2e-testing
-description: Smoke verification for ML Algorithms from Scratch (environment, notebook JSON, optional manual notebook run). Use when smoke-testing the workspace end-to-end after notebook or learning-content changes.
+description: Smoke verification for WebRTC Engineering (environment, tools Python, markdown lint, optional demo run). Use when smoke-testing the workspace end-to-end after content or implementation changes.
 ---
 
-# Smoke / E2E-style verification — ML Algorithms from Scratch
+# Smoke / E2E-style verification — WebRTC Engineering
 
-No deployed application here. "End-to-end" means **environment + parse + optional notebook execution**.
+No single deployed application spans the whole repo. "End-to-end" means **environment + lint + optional demo run**.
 
 ## Prerequisites
 
-- Python 3.12+ with **`uv`** at repo root
-- Optional: Jupyter — **Kernel → Restart & Run All**
+- Python 3.12+ with **`uv`** at repo root (tools)
+- Node.js for implementation demos (per topic folder)
+- Optional: Browser for manual demo verification
 
 ## Suggested sequence
 
-1. **Dependencies**
+1. **Dependencies (tools)**
 
    ```powershell
    $Env:UV_LINK_MODE = "copy"
    uv sync
    ```
 
-2. **Import smoke (optional)**
+2. **Python tools smoke (optional)**
 
    ```powershell
-   uv run python -c "import numpy, pandas, sklearn, scipy; print('ok')"
+   uv run python -c "import pathlib; print('ok', len(list(pathlib.Path('tools/pyscripts').glob('*.py'))))"
    ```
 
-3. **Notebook JSON** (same as CI):
+3. **Markdown lint** (same as CI):
 
    ```powershell
-   uv run python -c "import json,glob; paths=sorted(glob.glob('src/**/*.ipynb',recursive=True)); [json.load(open(p,encoding='utf-8')) for p in paths]"
+   npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/**/*.md" "tools/**/*.md"
    ```
 
-4. **Manual (optional)** — open a representative notebook from `src/weekN/03-notebooks/`, run all cells.
+4. **Manual (optional)** — open a representative demo from `src/**/03-implementations/`, verify getUserMedia / peer connection / signaling as applicable.
 
 ## Summary
 

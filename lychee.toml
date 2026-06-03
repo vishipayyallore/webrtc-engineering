@@ -27,8 +27,8 @@ exclude = [
   "http://127.0.0.1",
   # GitHub issue links may rate-limit during CI
   "^https://github\\.com/.*/issues/.*",
-  # Repo is private / may 404 without auth
-  "^https://github\\.com/msc-dsai-swamypkv-practice(/.*)?$",
+  # Repo may 404 without auth when private
+  "^https://github\\.com/vishipayyallore/webrtc-engineering(/.*)?$",
   # Decorative badges and vendor docs can be flaky for automated bots
   "^https://img\\.shields\\.io/.*",
   "^https://cursor\\.com/docs/.*",
@@ -43,5 +43,4 @@ exclude = [
   , "^file:///input/source-material/.*"
   # Vite default favicon path isn't a valid absolute URI in file scans
   , "^/vite\\.svg$"
-  , "^https://(www\\.)?mlcourse\\.ai(/.*)?$"
 ]

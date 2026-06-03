@@ -18,12 +18,12 @@ Keeping long policy **only** in copilot instructions + Cursor rules avoids **dri
 
 Short, **task-local** files (for example one-off prompt fragments or Claude Code–specific hooks) that are **not** mirrored elsewhere — **if** you use the Claude Code CLI and its conventions.
 
-Any `.claude/` helper content that guides learning outputs should preserve this repo's teaching style: explain ideas in layman language, stay beginner friendly, and connect concepts to realistic business use cases wherever practical.
+Any `.claude/` helper content that guides learning outputs should preserve this repo's teaching style: explain ideas in layman language, stay beginner friendly, and connect concepts to realistic use cases wherever practical.
 
 This repo does **not** require a `.claude/agents/` tree; custom subagents already live under **`.cursor/agents/`** (mirrored to **`.github/agents/`**). If you need Claude-native agent paths, copy from there rather than maintaining two divergent definitions.
 
 ## This learning workspace is not enterprise "clean architecture"
 
-Machine Learning Algorithms from Scratch here is **notes, quizzes, notebooks, and from-scratch code** — not a deployed N-tier product. Borrow the **split** (small global file + deeper playbooks), not production architecture jargon, unless you add it for a different project.
+WebRTC Engineering here is **notes, exercises, demos, and signaling servers** — not a deployed production platform. Borrow the **split** (small global file + deeper playbooks), not production architecture jargon, unless you add it for a different project.
 
-**This repo's topic contract:** four aligned layers per week under `src/weekN/` (`01-notes/`, `02-quizzes/`, `03-notebooks/`, `04-discussions/`) per `.github/copilot-instructions.md` and `.cursor/rules/01_educational-content-rules.mdc`. Where a visual explanation is applicable, prefer a Mermaid diagram plus an ASCII fallback so the idea remains readable in plain-text contexts.
+**This repo's topic contract:** four aligned layers per topic under `src/NN-category/topic-name/` (`01-notes/`, `02-exercises/`, `03-implementations/`, `04-discussions/`) per `.github/copilot-instructions.md` and `.cursor/rules/01_educational-content-rules.mdc`. Where a visual explanation is applicable, prefer a Mermaid diagram plus an ASCII fallback so the idea remains readable in plain-text contexts.

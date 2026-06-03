@@ -61,7 +61,7 @@ def pdf_to_markdown(input_pdf: Path, output_md: Path) -> None:
     lines.append("")
     lines.append(
         "> This is an automated extraction from a PDF for personal study. "
-        "Please **synthesize** into original notes before publishing to `src/weekN/01-notes/` "
+        "Please **synthesize** into original notes before publishing to `src/**/01-notes/` "
         "to respect the repository's Zero-Copy Policy."
     )
 
