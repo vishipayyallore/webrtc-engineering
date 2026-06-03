@@ -31,9 +31,6 @@ Each topic under `src/NN-category/topic-name/` maintains four companion subfolde
 - Use camelCase for variables and functions; PascalCase for classes/components.
 - Implementation folders use kebab-case.
 
-## Python Scripts (`tools/pyscripts/`)
-- Use snake_case (standard Python convention).
-
 ## Images & Figures
 - Use descriptive kebab-case names.
 - **Example**: `ice-gathering-states.png`

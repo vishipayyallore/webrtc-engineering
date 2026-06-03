@@ -32,7 +32,7 @@ Get-ChildItem $cRoot -Recurse -Filter SKILL.md | ForEach-Object {
 |--------|---------|
 | `webrtc-engineering` | Domain context for this repository |
 | `topic-companions` | Four-layer topic SOP, parity, definition of done |
-| `ci-checks` | Local commands aligned with `.github/workflows/ci-*.yml` |
+| `ci-checks` | Local commands aligned with `ci-node.yml` and `ci-documentation.yml` |
 | `docs-verification` | Markdown / four-layer bundle checks vs `docs/01-repository-structure.md` |
 | `workspace-review` | Full audit checklist for this educational repo |
 | `e2e-testing` | Smoke checks (env, lint, optional demo run) |

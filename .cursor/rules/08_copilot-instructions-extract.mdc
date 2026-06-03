@@ -71,21 +71,19 @@ Each topic under `src/NN-category/topic-name/` maintains four companion subfolde
 
 ## Environment & Commands
 
-**Environment**: Windows, PowerShell, Node.js, TypeScript/JavaScript, Python (tools)
+**Environment**: Windows, PowerShell, Node.js, TypeScript/JavaScript
 
-**Node.js demos:**
+**Node.js workspace:**
+
+```powershell
+npm ci
+npm run check
+```
 
 ```powershell
 cd src/<category>/<topic>/03-implementations/<demo>
 npm install
 npm start
-```
-
-**Python tools:**
-
-```powershell
-$Env:UV_LINK_MODE = "copy"
-uv sync
 ```
 
 ---

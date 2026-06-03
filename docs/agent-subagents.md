@@ -13,7 +13,7 @@ Custom **subagents** are Markdown files with YAML frontmatter that Cursor uses f
 
 | Subagent | Purpose |
 |----------|---------|
-| `webrtc-ci-verify` | Run CI-aligned checks locally (Python tools lint, markdownlint) |
+| `webrtc-ci-verify` | Run CI-aligned checks locally (TypeScript, ESLint, Prettier, markdownlint) |
 | `webrtc-topic-bundle-review` | Audit one topic module for four-layer parity and teaching quality |
 | `webrtc-zero-copy-review` | Spot-check paths for zero-copy / synthesis risk |
 

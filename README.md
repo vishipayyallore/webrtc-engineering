@@ -118,6 +118,13 @@ This repository is **Swamy PKV's personal learning workspace only**. It is **not
 * Docker
 * Kubernetes
 
+### Development (repo root)
+
+```powershell
+npm ci
+npm run check
+```
+
 ---
 
 ## Repository Structure

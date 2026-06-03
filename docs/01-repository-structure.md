@@ -92,7 +92,6 @@ webrtc-engineering/
 │   └── videos/
 │
 └── tools/
-    ├── pyscripts/
     └── psscripts/
 ```
 

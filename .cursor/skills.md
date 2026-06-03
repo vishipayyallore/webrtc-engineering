@@ -27,17 +27,18 @@ See `docs/01-repository-structure.md`.
 
 ## Tools (maintenance)
 
-- **Index:** `tools/README.md` → `pyscripts/README.md`, `psscripts/README.md`.
+- **Index:** `tools/README.md` → `psscripts/README.md`.
+- **Node checks:** `npm ci` && `npm run check` (TypeScript, ESLint, Prettier).
 - **Markdown / links:** `.github/skills/ci-checks/SKILL.md`; **Lychee** via Docker or `.\tools\psscripts\Run-MarkdownLintAndLychee.ps1`.
 - **Zero-copy spot checks:** `tools/psscripts/Verify-ZeroCopy.ps1` when applicable.
-- **Conversions (internal):** `tools/psscripts/Convert-SourceMaterialPdfsToMarkdown.ps1`, `tools/pyscripts/pptx_to_md.py`, `tools/pyscripts/pdf_to_md.py`.
+- **Legacy PDF/PPTX conversion (optional):** `.archive/tools/pyscripts/` — requires local Python, not CI.
 - **Public docs hygiene:** Never put internal-only source paths or labels in `README.md`, `docs/`, or public content trees; see `.cursor/rules/06_source_material_rules.mdc`.
 
 ---
 
 ## CI expectations
 
-- **Python tools:** `uv sync`, isort / black / flake8 on `tools/pyscripts/` — `ci-python.yml`.
+- **Node:** `npm ci`, typecheck, ESLint, Prettier — `ci-node.yml`.
 - **Docs:** Markdown lint and Lychee — `ci-documentation.yml`.
 - **Parity / guard:** `.github/skills/` ↔ `.cursor/skills/`; **`.github/agents/` ↔ `.cursor/agents/`**; **`ci-agent-docs-guard.yml`** when `.cursor/`, `.github/` skills or agents, or `CLAUDE.md` change.
 

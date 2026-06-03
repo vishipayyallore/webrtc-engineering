@@ -5,7 +5,7 @@
 **Repository**: `webrtc-engineering`
 **Context**: Personal WebRTC engineering learning workspace
 
-**Environment**: Windows, PowerShell, Node.js, TypeScript/JavaScript, Python (tools only)
+**Environment**: Windows, PowerShell, Node.js, TypeScript/JavaScript
 **Note**: All commands and scripts should use PowerShell syntax. File paths use Windows format.
 
 ---
@@ -41,7 +41,7 @@ This repository is **Swamy PKV's personal learning only**. It is **not** for any
 - `docs/` — Architecture notes, RFC summaries, diagrams, and agent documentation.
 - `experiments/` — Bandwidth, codec, and load-testing experiments.
 - `assets/` — Images, diagrams, and media assets.
-- `tools/` — Maintenance scripts (`pyscripts/`, `psscripts/`).
+- `tools/` — PowerShell maintenance scripts; legacy Python converters archived under `.archive/tools/pyscripts/`.
 - `README.md` — Project overview and learning roadmap.
 
 **Four-Layer Topic Module Architecture:**
@@ -115,19 +115,14 @@ The concept and path of source material are **internal-only** between the author
 - **Diagrams**: Use Mermaid diagrams and ASCII fallbacks for signaling flows, ICE states, SFU/MCU topologies, and media pipelines.
 - **Hands-on first**: Prefer runnable browser demos and small Node signaling servers over abstract-only notes.
 
-### Code Style (JavaScript/TypeScript)
+### Code Style (TypeScript/JavaScript)
 
 - Use meaningful variable names (`peerConnection` not `pc`, `localStream` not `ls`).
 - Prefer TypeScript for non-trivial implementations when the topic folder already uses it.
 - **Comments**: Explain the *why* of WebRTC steps (ICE gathering, SDP offer/answer, track lifecycle), not just syntax.
 - **No hardcoded secrets**: Use environment variables for TURN credentials and API keys.
 - **Browser compatibility**: Note which APIs require HTTPS or localhost.
-
-### Code Style (Python — tools only)
-
-- Follow PEP 8 for scripts under `tools/pyscripts/`.
-- Use type hints where appropriate.
-- Use `pathlib` or relative paths — no hardcoded absolute paths.
+- **Lint/format**: Root `npm run check` runs TypeScript, ESLint, and Prettier on workspace sources.
 
 ### Documentation Standards
 
@@ -180,6 +175,13 @@ For each topic module, follow the **four-layer learning architecture**:
 
 ## Running the Code
 
+**Node.js (workspace checks):**
+
+```powershell
+npm ci
+npm run check
+```
+
 **Node.js (implementations):**
 
 ```powershell
@@ -188,12 +190,10 @@ npm install
 npm start
 ```
 
-**Python tools (maintenance scripts):**
+**Optional legacy PDF/PPTX conversion** (Python 3.12+ locally, not part of CI):
 
 ```powershell
-$Env:UV_LINK_MODE = "copy"
-uv sync
-uv run python tools/pyscripts/<script>.py
+python .archive/tools/pyscripts/pdf_to_md.py --help
 ```
 
 ---

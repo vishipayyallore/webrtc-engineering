@@ -27,7 +27,7 @@ This is a **Personal Learning Workspace** for WebRTC Engineering that:
 
 - ✅ Active Learning: Ongoing WebRTC engineering study
 - ✅ Tech Stack: WebRTC, JavaScript, TypeScript, Node.js, Express, Socket.IO, Coturn, Docker
-- ✅ Python tools: Maintenance scripts under `tools/pyscripts/` only
+- ❌ NOT Python-first: Legacy PDF converters live under `.archive/tools/pyscripts/` only
 - ❌ NOT a Production Deployment: Code is for learning and experimentation unless explicitly marked otherwise.
 
 ## Documentation Accuracy

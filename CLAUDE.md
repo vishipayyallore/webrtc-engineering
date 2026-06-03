@@ -52,24 +52,21 @@ Assistant behaviour is defined under `.github/copilot-instructions.md`, `.cursor
 ## Environment
 
 ```powershell
-# Node.js demos (per implementation folder)
-npm install
-npm start
-
-# Python tools
-$Env:UV_LINK_MODE = "copy"
-uv sync
+npm ci
+npm run check
 ```
+
+Per-topic demos under `src/**/03-implementations/` may have their own `package.json` — run `npm install` and `npm start` inside that folder.
 
 ## CI checks (run locally)
 
-Aligned with `.github/workflows/ci-python.yml` (tools Python) and `.github/workflows/ci-documentation.yml`. Full detail: `.github/skills/ci-checks/SKILL.md`.
+Aligned with `.github/workflows/ci-node.yml` and `.github/workflows/ci-documentation.yml`. Full detail: `.github/skills/ci-checks/SKILL.md`.
 
 ```powershell
-uv sync
-uv run isort --check-only --diff tools/pyscripts/
-uv run black --check --line-length 127 --target-version py312 tools/pyscripts/
-uv run flake8 tools/pyscripts/ --count --select=E9,F63,F7,F82 --show-source --statistics
+npm ci
+npm run typecheck
+npm run lint
+npm run format:check
 npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/**/*.md" "tools/**/*.md"
 ```
 

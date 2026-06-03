@@ -81,7 +81,8 @@ Check for presence of:
 
 - Implementations grouped under `03-implementations/` per topic
 - Reusable modules within demo folders where appropriate
-- Python maintenance scripts under `tools/pyscripts/` only
+- Per-topic demos under `src/**/03-implementations/` with local `package.json` when needed
+- Root `npm run check` for workspace TypeScript, ESLint, and Prettier
 - No hardcoded TURN credentials or API keys
 
 ---

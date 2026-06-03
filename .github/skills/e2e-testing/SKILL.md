@@ -1,6 +1,6 @@
 ---
 name: e2e-testing
-description: Smoke verification for WebRTC Engineering (environment, tools Python, markdown lint, optional demo run). Use when smoke-testing the workspace end-to-end after content or implementation changes.
+description: Smoke verification for WebRTC Engineering (Node env, lint, optional demo run). Use when smoke-testing the workspace end-to-end after content or implementation changes.
 ---
 
 # Smoke / E2E-style verification — WebRTC Engineering
@@ -9,26 +9,24 @@ No single deployed application spans the whole repo. "End-to-end" means **enviro
 
 ## Prerequisites
 
-- Python 3.12+ with **`uv`** at repo root (tools)
-- Node.js for implementation demos (per topic folder)
-- Optional: Browser for manual demo verification
+- **Node.js 20+** at repo root (`npm ci`)
+- Optional: Browser for manual demo verification under `src/**/03-implementations/`
 
 ## Suggested sequence
 
-1. **Dependencies (tools)**
+1. **Dependencies**
 
    ```powershell
-   $Env:UV_LINK_MODE = "copy"
-   uv sync
+   npm ci
    ```
 
-2. **Python tools smoke (optional)**
+2. **Workspace checks**
 
    ```powershell
-   uv run python -c "import pathlib; print('ok', len(list(pathlib.Path('tools/pyscripts').glob('*.py'))))"
+   npm run check
    ```
 
-3. **Markdown lint** (same as CI):
+3. **Markdown lint** (same as CI docs workflow)
 
    ```powershell
    npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/**/*.md" "tools/**/*.md"

@@ -14,7 +14,7 @@ globs: *
 - **`docs/`**: Architecture notes, RFC summaries, diagrams, agent docs, and reviews.
 - **`experiments/`**: Bandwidth, codec, and load-testing experiments.
 - **`assets/`**: Images, diagrams, and media assets.
-- **`tools/`**: Maintenance scripts (`pyscripts/`, `psscripts/`).
+- **`tools/`**: PowerShell maintenance scripts (`psscripts/`).
 
 When writing or updating public-facing structure (for example `README.md` or `docs/01-repository-structure.md`), do not list or mention any internal-only paths.
 

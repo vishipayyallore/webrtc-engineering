@@ -26,7 +26,7 @@ This keeps the default context small while allowing deep playbooks on demand.
 |-------|---------|
 | `webrtc-engineering` | Domain context — WebRTC topic modules and teaching style |
 | `topic-companions` | Four-layer topic SOP, migration, definition of done |
-| `ci-checks` | Local CI commands (Python tools lint, markdownlint, Lychee) |
+| `ci-checks` | Local CI commands (TypeScript, ESLint, Prettier, markdownlint, Lychee) |
 | `docs-verification` | Markdown and four-layer consistency audit |
 | `workspace-review` | Full workspace audit checklist |
 | `e2e-testing` | Smoke verification after content or demo changes |

@@ -25,7 +25,7 @@ A clear and concise description of what this PR does.
 - [ ] Topic Discussion (`src/**/04-discussions/`)
 - [ ] Documentation (`README.md`, `docs/`, etc.)
 - [ ] Configuration (`.github/`, `.cursor/`, etc.)
-- [ ] Tools (`tools/pyscripts/`, `tools/psscripts/`)
+- [ ] Tools (`tools/psscripts/` only)
 
 ## Changes Made
 

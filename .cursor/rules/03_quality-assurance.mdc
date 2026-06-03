@@ -1,6 +1,6 @@
 ---
 description: Quality assurance standards for code and implementations
-globs: *.py, *.js, *.ts, *.html
+globs: *.js, *.ts, *.html
 ---
 # Quality Assurance
 
@@ -11,22 +11,21 @@ globs: *.py, *.js, *.ts, *.html
 - [ ] Clear error handling for getUserMedia, RTCPeerConnection, and signaling failures.
 - [ ] No hardcoded TURN credentials or API keys.
 - [ ] Comments explain WebRTC steps, not just syntax.
+- [ ] Passes root `npm run check` when workspace-level `.ts`/`.js` files are added.
 
 ### Node.js signaling servers
 - [ ] Documented start command and required environment variables.
 - [ ] WebSocket/Socket.IO message types documented.
 - [ ] Graceful shutdown and connection cleanup where applicable.
 
-### Python Scripts (`tools/pyscripts/`)
-- [ ] Follows PEP 8 style guide.
-- [ ] Type hints used for function arguments and return types where practical.
-- [ ] No hardcoded paths (use `pathlib` or relative paths).
-
 ## WebRTC Implementation Checklist
 - [ ] Signaling sequence (offer/answer, ICE candidates) matches the documented flow.
 - [ ] Media tracks and peer connection lifecycle handled correctly (add/remove, close).
 - [ ] STUN/TURN configuration documented when NAT traversal is involved.
 - [ ] Browser compatibility notes included where relevant.
+
+## Legacy tooling (optional)
+- Python converters under `.archive/tools/pyscripts/` are **not** part of CI or the WebRTC stack.
 
 ## Content Review Checklist (Zero-Copy)
 - [ ] **Originality Check**: Verify that text is not a direct copy from source material.

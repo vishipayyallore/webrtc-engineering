@@ -14,7 +14,7 @@ A clear description of the feature you'd like to see added.
 
 - [ ] New Algorithm Implementation
 - [ ] New Notebook (Algorithm explanation/Practice)
-- [ ] New Python Module (`src/`)
+- [ ] New Implementation / Demo (`src/**/03-implementations/`)
 - [ ] Visualization Improvement
 - [ ] Documentation Improvement
 - [ ] Other (please describe)
