@@ -5,3 +5,8 @@ dist
 coverage
 package-lock.json
 **/*.md
+.github/**
+.copilot/**
+.cursor/**
+.claude/**
+tools/psscripts/**
