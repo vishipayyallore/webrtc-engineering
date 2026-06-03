@@ -3,15 +3,14 @@ globs: *
 ---
 # Repository Structure
 
-**Project**: WebRTC Engineering (personal learning workspace)
+**Project**: WebRTC Engineering — demo applications repository
 
 > **Single Source of Truth**: For the complete and detailed repository structure, naming conventions, and workflow standards, refer to [docs/01-repository-structure.md](../../docs/01-repository-structure.md).
 
 ## Quick Summary
 
-- **`src/NN-category/topic-name/`**: Topic modules grouped by learning area (fundamentals, signaling, networking, etc.).
-- **Four layers per topic**: `01-notes/`, `02-exercises/`, `03-implementations/`, `04-discussions/`.
-- **`docs/`**: Architecture notes, RFC summaries, diagrams, agent docs, and reviews.
+- **`src/NN-category/demo-name/`**: Self-contained WebRTC demo apps grouped by area (fundamentals, signaling, small projects, etc.).
+- **`docs/`**: Architecture notes, RFC summaries, diagrams, and reviews.
 - **`experiments/`**: Bandwidth, codec, and load-testing experiments.
 - **`assets/`**: Images, diagrams, and media assets.
 - **`tools/`**: PowerShell maintenance scripts (`psscripts/`).
@@ -20,5 +19,5 @@ When writing or updating public-facing structure (for example `README.md` or `do
 
 ## Preserved archives
 
-- `.archive/` contains old category-based learning content. Leave it as preserved legacy material unless Swamy explicitly asks to migrate or clean it.
-- Routine parity, docs, and CI reviews should focus on active `src/` topic modules and governance/tooling consistency.
+- `.archive/` contains legacy tooling and old content. Leave it as-is unless Swamy explicitly asks to migrate or clean it.
+- Routine parity, docs, and CI reviews should focus on active `src/` demos and governance/tooling consistency.

@@ -12,11 +12,8 @@ A clear description of the content improvement you'd like to see.
 
 ## Content Type
 
-- [ ] Topic Notes (`src/**/01-notes/`)
-- [ ] Topic Exercise (`src/**/02-exercises/`)
-- [ ] Implementation / Demo (`src/**/03-implementations/`)
-- [ ] Topic Discussion (`src/**/04-discussions/`)
-- [ ] Documentation (`docs/`, `README.md`)
+- [ ] Demo app (`src/**/`)
+- [ ] Demo README / docs
 - [ ] Code Comments
 
 ## Current Content
@@ -43,4 +40,4 @@ Any other information, examples, or references that would help.
 
 ---
 
-**Note**: This repository is Swamy PKV's personal WebRTC study workspace. Suggestions should match the current topic-based four-layer structure.
+**Note**: Personal WebRTC demo applications repo. Suggestions should match the demo layout under `src/NN-category/demo-name/`.

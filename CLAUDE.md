@@ -8,9 +8,9 @@
 
 This repository is **Swamy PKV's personal learning** material. It is **not** maintained for other learners, employers, or the public. Do **not** reword `README.md`, reading notes, or docs to imply a general audience unless Swamy explicitly asks. Preserve the **Scope (read this first)** block in `README.md`.
 
-## Learning layout (this repo)
+## Layout (this repo)
 
-Companion artifacts follow the **four-layer topic module** pattern in `.github/copilot-instructions.md`, organized by category and topic under `src/` (`01-notes/`, `02-exercises/`, `03-implementations/`, `04-discussions/` within each topic folder). See `docs/01-repository-structure.md`.
+**Demo applications** live under `src/NN-category/demo-name/` — each folder is a self-contained WebRTC app with README, code, and optional `package.json`. See `docs/01-repository-structure.md`.
 
 ## Agent skills (`SKILL.md`)
 
@@ -31,7 +31,7 @@ Bundled on-demand procedures live under `.github/skills/` (mirrored at `.cursor/
 
 | Layer | In this repository | Holds |
 |------|---------------------|--------|
-| **Global contract** | **`CLAUDE.md` (this file)** | What this repo *is*, Swamy-only scope, four-layer layout pointer, governance and CI pointers, key-file table. **Not** a second full copy of `.github/copilot-instructions.md` or `.cursor/rules/`. |
+| **Global contract** | **`CLAUDE.md` (this file)** | What this repo *is*, Swamy-only scope, demo layout pointer, governance and CI pointers, key-file table. |
 | **Playbooks** | **`.github/skills/`** (mirrored **`.cursor/skills/`**), **`.cursor/agents/`** (mirrored **`.github/agents/`**), **`.github/prompts/`** | How to run CI, audit a topic, write prompts, etc. |
 | **Optional Claude Code extras** | **`.claude/`** | Short, CLI-only additions if you use them; see **`.claude/README.md`**. Avoid pasting long rules there (drift risk). |
 
@@ -56,7 +56,7 @@ npm ci
 npm run check
 ```
 
-Per-topic demos under `src/**/03-implementations/` may have their own `package.json` — run `npm install` and `npm start` inside that folder.
+Per-topic demos under `src/NN-category/demo-name/` may have their own `package.json` — run `npm install` and `npm start` inside that folder.
 
 ## CI checks (run locally)
 
@@ -78,7 +78,7 @@ Optional link check (Docker, from repo root): `docker run --rm -v "${PWD}:/works
 |------|---------|
 | `README.md` | Overview and strict personal scope |
 | `docs/agent-skills.md` | SKILL.md pattern, progressive disclosure, skills mirror |
-| `.github/skills/topic-companions/SKILL.md` | Four-layer topic SOP, parity, definition of done (mirrored under `.cursor/skills/`) |
+| `.github/skills/webrtc-engineering/SKILL.md` | Domain context for demo apps (mirrored under `.cursor/skills/`) |
 | `docs/agent-governance-recovery.md` | Keep governance uncorrupted (primary); Git restore bundle (secondary) |
 | `docs/01-repository-structure.md` | Structural single source of truth |
 | `.github/copilot-instructions.md` | Canonical Copilot / agent instructions |
@@ -87,7 +87,7 @@ Optional link check (Docker, from repo root): `docker run --rm -v "${PWD}:/works
 | `.github/prompts/smart-prompt-framework-guide.md` | S.M.A.R.T. prompt framework |
 | `.claude/README.md` | Optional Claude Code tree: how it maps to skills/agents |
 | `.cursor/rules/00_swamy_personal_learning_only.mdc` | Swamy-only scope (always apply) |
-| `.cursor/rules/01_educational-content-rules.mdc` | Zero-copy, voice, four-layer companions |
+| `.cursor/rules/01_educational-content-rules.mdc` | Zero-copy, voice, demo documentation |
 | `.cursor/rules/02_repository-structure.mdc` | Repository layout and naming |
 | `.cursor/rules/03_quality-assurance.mdc` | QA checklists for `src/` and implementations |
 | `.cursor/rules/04_markdown-standards.mdc` | Markdown structure for authored `.md` |

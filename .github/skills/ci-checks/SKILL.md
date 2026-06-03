@@ -58,7 +58,7 @@ Or: `.\tools\psscripts\Run-MarkdownLintAndLychee.ps1 -LycheeOnly` / local `lyche
 
 ## Execution strategy
 
-Run 1–3 from repo root with `npm`; run 4 with `npx`. Per-topic demos under `src/**/03-implementations/` may have their own `npm test` — run when editing that demo.
+Run 1–3 from repo root with `npm`; run 4 with `npx`. Demos under `src/NN-category/demo-name/` may have their own scripts — run when editing that demo.
 
 ## On failure
 

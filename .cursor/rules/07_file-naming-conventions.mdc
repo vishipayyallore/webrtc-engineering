@@ -1,36 +1,21 @@
-description: Naming conventions for demos, scripts, and notes
+description: Naming conventions for demos, scripts, and docs
 globs: *
 ---
 # File Naming Conventions
 
-## Four-Layer Topic Module Architecture
+## Demo applications
 
-Each topic under `src/NN-category/topic-name/` maintains four companion subfolders:
-
-1. **Notes**: `01-notes/` — Theory, first-person learning journey
-2. **Exercises**: `02-exercises/` — Self-assessment (original synthesis only)
-3. **Implementations**: `03-implementations/` — Runnable demos and servers
-4. **Discussions**: `04-discussions/` — Worked examples and architecture walkthroughs
-
-**Category folders:** numbered lowercase prefix (e.g. `01-fundamentals/`, `02-signaling/`).
-**Topic folders:** kebab-case (e.g. `media-streams/`, `peer-connection/`).
-
-### Notes (`01-notes/`)
-- Format: descriptive kebab-case markdown, e.g. `getusermedia-basics.md`
-
-### Exercises (`02-exercises/`)
-- Format: descriptive kebab-case markdown with `-exercise` suffix, e.g. `ice-candidates-exercise.md`
-
-### Implementations (`03-implementations/`)
-- Format: descriptive kebab-case folder or file, e.g. `basic-video-call/`, `offer-answer-demo.html`
-
-### Discussions (`04-discussions/`)
-- Format: descriptive kebab-case markdown with `-discussion` suffix, e.g. `sfu-vs-mcu-discussion.md`
+- **Category folders:** numbered lowercase prefix (e.g. `01-fundamentals/`, `06-small-projects/`).
+- **Demo folders:** kebab-case (e.g. `webcam-viewer/`, `video-call/`).
+- **Each demo** includes `README.md` at its root; add `package.json` when the demo uses Node dependencies.
 
 ## JavaScript/TypeScript
 - Use camelCase for variables and functions; PascalCase for classes/components.
-- Implementation folders use kebab-case.
+- Demo source files use kebab-case or camelCase consistent with the demo's existing style.
 
 ## Images & Figures
-- Use descriptive kebab-case names.
+- Use descriptive kebab-case names under `assets/` or within a demo's `public/` folder.
 - **Example**: `ice-gathering-states.png`
+
+## Documentation (`docs/`)
+- Use kebab-case markdown filenames (e.g. `ice-overview.md`, `sfu-vs-mcu.md`).

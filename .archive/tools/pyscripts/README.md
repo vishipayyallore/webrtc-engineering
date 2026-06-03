@@ -18,4 +18,4 @@ See individual script headers for flags. Outputs from internal source material m
 ## Do not
 
 - Add these scripts back to CI
-- Publish converted content without zero-copy synthesis into `src/**/01-notes/`
+- Publish converted content without zero-copy synthesis into demo READMEs or `docs/`

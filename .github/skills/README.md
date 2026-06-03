@@ -4,37 +4,16 @@ This directory is the **source of truth** for bundled agent skills used with Cur
 
 ## Mirror
 
-`.cursor/skills/` must stay **identical** to `.github/skills/` (same paths, same `SKILL.md` and `README.md` bytes). After editing here, copy the updated tree to `.cursor/skills/`.
-
-### Verify parity (PowerShell, repo root)
-
-```powershell
-$gRoot = Join-Path (Get-Location) ".github\skills"
-$cRoot = Join-Path (Get-Location) ".cursor\skills"
-Get-ChildItem $gRoot -Recurse -Filter SKILL.md | ForEach-Object {
- $rel = $_.FullName.Substring($gRoot.Length + 1)
- $c = Join-Path $cRoot $rel
- if (-not (Test-Path $c)) { Write-Host "Missing in .cursor/skills: $rel"; return }
- if ((Get-FileHash $_.FullName -Algorithm SHA256).Hash -ne (Get-FileHash $c -Algorithm SHA256).Hash) {
- Write-Host "MISMATCH: $rel"
- }
-}
-Get-ChildItem $cRoot -Recurse -Filter SKILL.md | ForEach-Object {
- $rel = $_.FullName.Substring($cRoot.Length + 1)
- $g = Join-Path $gRoot $rel
- if (-not (Test-Path $g)) { Write-Host "Extra in .cursor/skills (not in .github): $rel" }
-}
-```
+`.cursor/skills/` must stay **identical** to `.github/skills/` (same paths, same `SKILL.md` and `README.md` bytes).
 
 ## Bundled skills
 
 | Folder | Purpose |
 |--------|---------|
-| `webrtc-engineering` | Domain context for this repository |
-| `topic-companions` | Four-layer topic SOP, parity, definition of done |
+| `webrtc-engineering` | Domain context — WebRTC demo applications |
 | `ci-checks` | Local commands aligned with `ci-node.yml` and `ci-documentation.yml` |
-| `docs-verification` | Markdown / four-layer bundle checks vs `docs/01-repository-structure.md` |
-| `workspace-review` | Full audit checklist for this educational repo |
+| `docs-verification` | Markdown and demo README checks vs `docs/01-repository-structure.md` |
+| `workspace-review` | Full audit checklist for this repo |
 | `e2e-testing` | Smoke checks (env, lint, optional demo run) |
 
 **CI:** Pushes that touch skills run `.github/workflows/ci-skills-parity.yml`; agent docs changes also run `.github/workflows/ci-agent-docs-guard.yml`.

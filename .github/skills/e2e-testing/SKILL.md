@@ -10,7 +10,7 @@ No single deployed application spans the whole repo. "End-to-end" means **enviro
 ## Prerequisites
 
 - **Node.js 20+** at repo root (`npm ci`)
-- Optional: Browser for manual demo verification under `src/**/03-implementations/`
+- Optional: Browser for manual demo verification under `src/NN-category/demo-name/`
 
 ## Suggested sequence
 
@@ -32,7 +32,7 @@ No single deployed application spans the whole repo. "End-to-end" means **enviro
    npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/**/*.md" "tools/**/*.md"
    ```
 
-4. **Manual (optional)** — open a representative demo from `src/**/03-implementations/`, verify getUserMedia / peer connection / signaling as applicable.
+4. **Manual (optional)** — open a demo from `src/NN-category/demo-name/` and verify behavior.
 
 ## Summary
 

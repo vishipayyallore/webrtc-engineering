@@ -5,28 +5,19 @@ webrtc-engineering/
 │
 ├── README.md
 ├── LICENSE
-├── CLAUDE.md
-├── AGENTS.md
+├── package.json          # workspace lint/typecheck (root)
 │
 ├── docs/
 │   ├── 01-repository-structure.md
-│   ├── agent-skills.md
-│   ├── agent-subagents.md
-│   ├── agent-governance-recovery.md
 │   ├── architecture/
 │   ├── diagrams/
 │   ├── notes/
 │   ├── rfc-notes/
-│   ├── course-notes/
 │   └── reviews/
 │
 ├── src/
 │   ├── 01-fundamentals/
-│   │   ├── media-streams/
-│   │   │   ├── 01-notes/
-│   │   │   ├── 02-exercises/
-│   │   │   ├── 03-implementations/
-│   │   │   └── 04-discussions/
+│   │   ├── media-streams/          # demo app folder
 │   │   ├── peer-connection/
 │   │   ├── rtc-data-channel/
 │   │   └── ice-candidates/
@@ -81,33 +72,26 @@ webrtc-engineering/
 │       └── deployment/
 │
 ├── experiments/
-│   ├── bandwidth-testing/
-│   ├── load-testing/
-│   ├── codec-benchmarks/
-│   └── packet-loss-simulation/
-│
 ├── assets/
-│   ├── images/
-│   ├── diagrams/
-│   └── videos/
-│
 └── tools/
     └── psscripts/
 ```
 
-## Four-layer topic modules
+## Demo application layout
 
-Each **topic folder** under `src/NN-category/` uses four companion subfolders:
+Each **demo** lives in its own folder under `src/NN-category/demo-name/`:
 
-| # | Subfolder | Role |
-|---|-----------|------|
-| 1 | `01-notes/` | Theory — first-person learning journey |
-| 2 | `02-exercises/` | Self-assessment (original synthesis only) |
-| 3 | `03-implementations/` | Runnable demos (HTML/JS/TS, Node signaling, etc.) |
-| 4 | `04-discussions/` | Worked examples and architecture walkthroughs |
+```text
+src/06-small-projects/webcam-viewer/
+├── README.md           # purpose, run steps, WebRTC concepts touched
+├── package.json        # when the demo needs Node dependencies
+├── public/             # static client (typical for browser demos)
+├── src/                # client and/or server TypeScript/JavaScript
+└── ...                 # add folders as the demo needs them
+```
 
-**Category folders** use numbered lowercase prefixes (`01-fundamentals/`, `02-signaling/`, …). **Topic folders** use kebab-case (`media-streams/`, `peer-connection/`, …).
+**Category folders** use numbered lowercase prefixes (`01-fundamentals/`, `06-small-projects/`, …). **Demo folders** use kebab-case (`webcam-viewer/`, `video-call/`).
 
-**Learning flow:** Read notes → do exercises → build implementations → discuss examples.
+Optional reference material (RFC summaries, architecture sketches) belongs in `docs/` — not in a fixed subfolder pattern inside each demo.
 
 When writing or updating public-facing structure (for example `README.md` or this file), do not list or mention any internal-only paths.

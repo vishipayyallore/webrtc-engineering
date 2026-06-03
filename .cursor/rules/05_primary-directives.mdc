@@ -39,5 +39,5 @@ This is a **Personal Learning Workspace** for WebRTC Engineering that:
 ## Code Maintenance
 
 - Browser demos should run on localhost or HTTPS as required by the APIs used.
-- Separate reusable logic into modules within `03-implementations/` where appropriate.
+- Separate reusable logic into modules within each demo folder where appropriate.
 - Use TypeScript for non-trivial implementations when the topic folder already uses it.

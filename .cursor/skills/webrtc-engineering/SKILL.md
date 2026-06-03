@@ -1,6 +1,6 @@
 ---
 name: webrtc-engineering
-description: Work on webrtc-engineering — topic modules under src/, four-layer companions (01-notes, 02-exercises, 03-implementations, 04-discussions), hands-on WebRTC demos, zero-copy, beginner-friendly explanations, and real-world use cases.
+description: Work on webrtc-engineering — WebRTC demo applications under src/, hands-on browser and Node.js code, demo READMEs, zero-copy docs, and real-world use cases.
 ---
 
 # WebRTC Engineering
@@ -9,26 +9,23 @@ description: Work on webrtc-engineering — topic modules under src/, four-layer
 
 ## Layout
 
-Content is organized by **category and topic** under `src/`. Each topic has four companion subfolders:
+Self-contained **demo apps** live under `src/NN-category/demo-name/` (for example `src/06-small-projects/webcam-viewer/`).
 
-| Layer | Path |
-|-------|------|
-| Notes | `src/NN-category/topic-name/01-notes/` |
-| Exercises | `src/NN-category/topic-name/02-exercises/` |
-| Implementations | `src/NN-category/topic-name/03-implementations/` |
-| Discussions | `src/NN-category/topic-name/04-discussions/` |
+Each demo typically includes:
 
-See `docs/01-repository-structure.md` for the full category tree.
+- `README.md` — purpose, run steps, WebRTC concepts
+- Application code (HTML/JS/TS, optional Node signaling server)
+- `package.json` when Node dependencies are needed
+
+See `docs/01-repository-structure.md` for the category tree.
 
 ## Related
 
-- **Topic SOP:** `.github/skills/topic-companions/SKILL.md`
 - **CI commands:** `.github/skills/ci-checks/SKILL.md`
-- **Subagent:** `.cursor/agents/webrtc-topic-bundle-review.md`
+- **Subagent:** `.cursor/agents/webrtc-demo-review.md`
 
-## Teaching style
+## Demo documentation style
 
-- Explain concepts in beginner-friendly language before using formal WebRTC terms.
-- Add layman explanations for ICE, SDP, codecs, and topology choices.
-- Use realistic use cases (video calls, screen share, telehealth, webinars) where practical.
+- Explain concepts in beginner-friendly language in READMEs and comments.
+- Use realistic use cases (video calls, screen share, telehealth) where practical.
 - Include Mermaid diagrams with ASCII fallbacks for signaling flows and architecture.

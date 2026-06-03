@@ -18,14 +18,13 @@ This repository is **Swamy PKV's personal learning only**. It is **not** for any
 
 ## Repository Purpose
 
-**webrtc-engineering** is **Swamy's** workspace for learning, experimenting with, and building real-time communication systems using WebRTC. It contains structured notes, exercises, implementations, and projects — **for his use**, not as a shared product for others.
+**webrtc-engineering** is **Swamy's** workspace for building and experimenting with WebRTC demo applications — browser clients, signaling servers, and media pipelines in JavaScript/TypeScript.
 
 ### What This Repository Provides
 
-- **Structured Learning Material**: Notes on WebRTC concepts, protocols, and architecture.
-- **Hands-on Implementations**: Browser demos, signaling servers, and media pipelines in JavaScript/TypeScript.
-- **Practice Exercises**: Self-assessment and lab scenarios (original synthesis only).
-- **Resources**: RFC notes, course synthesis, and reference diagrams for Swamy's WebRTC study.
+- **Demo applications**: Runnable WebRTC examples grouped by category under `src/`.
+- **Supporting docs**: Architecture notes, RFC summaries, and diagrams under `docs/`.
+- **Experiments**: Bandwidth, codec, and load-testing under `experiments/`.
 
 ### Who this is for
 
@@ -37,35 +36,26 @@ This repository is **Swamy PKV's personal learning only**. It is **not** for any
 
 **Quick Reference:**
 
-- `src/NN-category/topic-name/` — Topic modules grouped by learning area (see `docs/01-repository-structure.md`).
+- `src/NN-category/demo-name/` — Self-contained WebRTC demo apps (see `docs/01-repository-structure.md`).
 - `docs/` — Architecture notes, RFC summaries, diagrams, and agent documentation.
 - `experiments/` — Bandwidth, codec, and load-testing experiments.
 - `assets/` — Images, diagrams, and media assets.
 - `tools/` — PowerShell maintenance scripts; legacy Python converters archived under `.archive/tools/pyscripts/`.
 - `README.md` — Project overview and learning roadmap.
 
-**Four-Layer Topic Module Architecture:**
+**Demo application layout:**
 
-Each active topic under `src/` maintains four companion subfolders:
-
-1. **Notes**: `01-notes/` — Theory, first-person learning journey
-2. **Exercises**: `02-exercises/` — Self-assessment (original synthesis only)
-3. **Implementations**: `03-implementations/` — Runnable demos (HTML/JS/TS, Node signaling, etc.)
-4. **Discussions**: `04-discussions/` — Worked examples and architecture walkthroughs
-
-**Example for a topic:**
+Each demo under `src/` is a standalone app folder with its own README, code, and optional `package.json`:
 
 ```text
-src/01-fundamentals/media-streams/
-├── 01-notes/
-├── 02-exercises/
-├── 03-implementations/
-└── 04-discussions/
+src/06-small-projects/webcam-viewer/
+├── README.md
+├── package.json
+├── public/
+└── src/
 ```
 
-**Learning Flow**: Read notes → Do exercises → Build implementations → Discuss examples
-
-**Category folders** use numbered prefixes: `01-fundamentals/`, `02-signaling/`, `03-networking/`, etc. See `docs/01-repository-structure.md` for the full tree.
+**Category folders** use numbered prefixes: `01-fundamentals/`, `06-small-projects/`, etc. **Demo folders** use kebab-case. See `docs/01-repository-structure.md` for the full tree.
 
 ---
 
@@ -97,7 +87,7 @@ The concept and path of source material are **internal-only** between the author
 
 1. Read from `source-material/` to understand concepts
 2. Synthesize — Rewrite in your own words (NO copy-paste)
-3. Publish to educational folders (`src/**/01-notes/`, `src/**/02-exercises/`, `src/**/03-implementations/`, `src/**/04-discussions/`, `docs/`)
+3. Publish original demo code and READMEs under `src/NN-category/demo-name/`, or reference notes under `docs/`
 4. Cite when using specific RFC sections, API definitions, or course claims
 
 **Zero-Copy Policy:**
@@ -110,8 +100,7 @@ The concept and path of source material are **internal-only** between the author
 ### Project Focus
 
 - **Protocol Accuracy**: Ensure WebRTC concepts, SDP/ICE flows, and signaling sequences are correct.
-- **Exercise alignment**: Marked answers and worked steps must match the explanation.
-- **Code Quality**: Use clear, well-commented JavaScript/TypeScript; follow existing project conventions when a demo has a build setup.
+- **Code Quality**: Use clear, well-commented JavaScript/TypeScript; follow existing conventions in each demo.
 - **Diagrams**: Use Mermaid diagrams and ASCII fallbacks for signaling flows, ICE states, SFU/MCU topologies, and media pipelines.
 - **Hands-on first**: Prefer runnable browser demos and small Node signaling servers over abstract-only notes.
 
@@ -128,7 +117,7 @@ The concept and path of source material are **internal-only** between the author
 
 - **Review reports**: All review reports go in `docs/reviews/`.
 - **RFC notes**: Protocol summaries go in `docs/rfc-notes/`.
-- **Topic notes**: Synthesized study notes go in `src/**/01-notes/`.
+- **Demo READMEs**: Purpose, run steps, and WebRTC concepts for each app under `src/`.
 
 ### Voice and Tone
 
@@ -138,7 +127,7 @@ The concept and path of source material are **internal-only** between the author
 
 ### Plain English or worked example (every concept)
 
-When authoring or editing public learning Markdown under `src/**/01-notes/`, `src/**/02-exercises/`, `src/**/04-discussions/`, and comparable notes:
+When authoring or editing demo READMEs, `docs/`, or explanatory comments:
 
 - **Minimum:** For each concept, provide at least one of **(A)** simple plain-English explanation or **(B)** a worked example.
 - **Beginner-friendly default:** Assume I am revising the topic after a gap. Use beginner-friendly wording before technical wording, and define specialist terms the first time they appear.
@@ -151,25 +140,10 @@ When authoring or editing public learning Markdown under `src/**/01-notes/`, `sr
 **Category folder naming:**
 
 - Use numbered lowercase prefixes: `01-fundamentals/`, `02-signaling/`, `03-networking/`, etc.
-- Topic folders use kebab-case: `media-streams/`, `peer-connection/`, `websocket-signaling/`.
-
-**File naming within topic layers:**
-
-- Notes: descriptive kebab-case markdown, e.g. `getusermedia-basics.md`
-- Exercises: descriptive markdown with `-exercise` suffix, e.g. `ice-candidates-exercise.md`
-- Implementations: descriptive names, e.g. `basic-video-call/` (folder) or `offer-answer-demo.html`
-- Discussions: descriptive markdown with `-discussion` suffix, e.g. `sfu-vs-mcu-discussion.md`
+- Demo folders use kebab-case: `webcam-viewer/`, `video-call/`, `websocket-signaling/`.
+- Each demo includes `README.md`; add `package.json` when Node dependencies are needed.
 
 **No `00_` prefix**: Files and folders must NOT use the `00_` prefix.
-
-### Preferred Learning Flow
-
-For each topic module, follow the **four-layer learning architecture**:
-
-1. **Notes** (`01-notes/`) — Core concepts, protocol flows, and architecture foundations.
-2. **Exercises** (`02-exercises/`) — Original synthesis questions to test understanding.
-3. **Implementations** (`03-implementations/`) — Build understanding through runnable demos and servers.
-4. **Discussions** (`04-discussions/`) — Worked examples and architecture trade-offs.
 
 ---
 
@@ -185,7 +159,7 @@ npm run check
 **Node.js (implementations):**
 
 ```powershell
-cd src/<category>/<topic>/03-implementations/<demo-folder>
+cd src/<category>/<demo-name>
 npm install
 npm start
 ```
@@ -202,7 +176,7 @@ python .archive/tools/pyscripts/pdf_to_md.py --help
 
 When asking Copilot for help:
 
-- Name the artifact and the goal clearly (for example `src/01-fundamentals/media-streams/01-notes/getusermedia-basics.md` or a signaling server under `03-implementations/`).
+- Name the demo and goal clearly (for example `src/06-small-projects/webcam-viewer/README.md` or the signaling server in that demo).
 - Ask for **(A)** plain-English intuition and/or **(B)** a small step-by-step walkthrough when introducing ICE, SDP, or codec negotiation.
 - Request runnable browser demos or Node signaling examples where appropriate.
 - Ask for Mermaid + ASCII signaling or topology diagrams when explaining architecture.

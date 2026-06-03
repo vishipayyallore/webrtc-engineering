@@ -3,7 +3,7 @@ globs: *.md, *.html, *.js, *.ts
 ---
 # Educational Content Rules
 
-**Context**: Personal WebRTC engineering learning notes and hands-on practice.
+**Context**: Personal WebRTC demo applications and hands-on practice.
 **Priority**: HIGH
 
 ## Core principles
@@ -15,38 +15,33 @@ globs: *.md, *.html, *.js, *.ts
 - **Examples must be original**: Do not reuse institutional examples verbatim; create fresh scenarios in your own words.
 
 ### Clarity and structure
-- **Concept first**: Explain the WebRTC concept in Markdown before writing code.
+- **Concept first**: Explain the WebRTC concept in the demo README (or comments) before diving into implementation detail.
 - **Visuals**: Use signaling-flow and topology diagrams when they clarify ICE, SDP, or media paths. Include Mermaid diagrams with ASCII fallbacks wherever a visual explanation is applicable.
 
 ### Plain English or worked example (every concept)
-- **Minimum**: For each concept, provide at least one of **(A)** a plain-English explanation or **(B)** a worked example.
+- **Minimum**: For each concept a demo teaches, provide at least one of **(A)** a plain-English explanation or **(B)** a worked example in the README or code comments.
 - **Beginner-friendly default**: Write for revision after a gap. Use simple wording first, then add technical precision.
 - **Layman explanation**: Explain the idea in everyday language before moving to jargon or implementation detail.
 - **Real-world use cases**: Attach at least one realistic use case (video call, screen share, webinar, telehealth) where it helps.
-- **Teaching Markdown**: Apply this standard in reading notes, exercises, discussions, and implementation README cells that introduce a new concept.
 
-### Code in education
+### Code in demos
 - **Comments**: Explain the WebRTC reason for the step (ICE gathering, track lifecycle, SDP negotiation), not just syntax.
 - **Variable names**: Use descriptive names (`peerConnection` over `pc`, `localStream` over `ls`).
 - **Secrets**: Never hardcode TURN credentials or API keys; use environment variables.
 
 ## Voice and tone
-- **Personal learning journey**: Write reading notes as Swamy's first-person learning journey.
+- **Personal learning journey**: Write demo READMEs as Swamy's first-person learning notes where appropriate.
 - **Reflection-oriented**: Prefer "I'm learning…", "I plan to…", and "I want to be able to…" over generic instructor phrasing.
-- **Avoid course framing**: Do not title notes as "Course …" or write like a lecturer.
+- **Avoid course framing**: Do not title docs as "Course …" or write like a lecturer.
 
-## Four-layer topic module architecture
+## Demo documentation
 
-Each active topic under `src/NN-category/topic-name/` maintains four companion subfolders:
+Each demo under `src/NN-category/demo-name/` should include a **README.md** with:
 
-1. **Notes**: `01-notes/` — Theory, first-person learning journey
-2. **Exercises**: `02-exercises/` — Self-assessment (original synthesis only)
-3. **Implementations**: `03-implementations/` — Runnable demos and servers
-4. **Discussions**: `04-discussions/` — Worked examples and architecture walkthroughs
-
-**Do not copy** author or course samples into `02-exercises/` or `04-discussions/`. Those remain reference-only.
-
-**Learning flow**: Read notes → do exercises → build implementations → discuss examples.
+1. **Purpose** — what WebRTC capability this demo explores
+2. **Run steps** — how to start it (localhost/HTTPS requirements)
+3. **Concepts** — plain-English notes on protocols/APIs used
+4. **Optional**: diagram of signaling or media flow
 
 ## Markdown standards
 - Use H2 (`##`) for main topics and H3 (`###`) for subtopics.

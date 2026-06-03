@@ -6,7 +6,7 @@ globs: *.js, *.ts, *.html
 
 ## Code Quality Checklist
 
-### JavaScript/TypeScript (`src/**/03-implementations/`)
+### JavaScript/TypeScript (demo apps under `src/`)
 - [ ] Runs on localhost or HTTPS as required by the browser APIs used.
 - [ ] Clear error handling for getUserMedia, RTCPeerConnection, and signaling failures.
 - [ ] No hardcoded TURN credentials or API keys.

@@ -4,102 +4,44 @@ globs: *
 ---
 # Copilot Instructions Extract
 
-**Source**: `.github/copilot-instructions.md` from this repository
+**Source**: `.github/copilot-instructions.md`
 **Purpose**: Key guidelines for AI assistants working on this repository
 
 ---
 
 ## Repository Context
 
-**WebRTC Engineering** is a personal learning workspace for real-time communication systems. It contains structured notes, exercises, implementations, and projects for hands-on WebRTC study.
+**WebRTC Engineering** is a personal demo-applications workspace for real-time communication systems.
 
-### Intended use
+### Demo layout
 
-- Swamy PKV's personal WebRTC engineering learning
-- Private revision, practice, and implementation notes for Swamy only
-
-### Four-Layer Topic Module Architecture
-
-Each topic under `src/NN-category/topic-name/` maintains four companion subfolders:
-
-1. **Notes**: `01-notes/` — Theory, first-person learning journey
-2. **Exercises**: `02-exercises/` — Self-assessment (original synthesis only)
-3. **Implementations**: `03-implementations/` — Runnable demos and servers
-4. **Discussions**: `04-discussions/` — Worked examples and architecture walkthroughs
-
-**Learning Flow**: Read notes → Do exercises → Build implementations → Discuss examples
+Self-contained apps under `src/NN-category/demo-name/` with README, code, and optional `package.json`.
 
 ---
 
 ## Development Guidelines
 
-### Source Material Staging
+### Source Material
 
-**Critical Restrictions:**
+- Internal reference material is **read-only** — never edit or mention in public docs.
+- Migration: read → synthesize → publish demo code/READMEs under `src/` or notes under `docs/`.
 
-- **Read-Only Policy**: NEVER modify, overwrite, or edit files inside `source-material/`
-- **No Deletion Policy**: NEVER delete anything from `source-material/`
-- **Export Location Policy**: NEVER export to `docs/exports/` when source is under `source-material/`; colocate outputs in the same source-material tree
+### Zero-Copy
 
-**Migration Workflow:**
+- Original synthesis in READMEs and docs; no verbatim course paste.
 
-1. Read from `source-material/` to understand concepts
-2. Synthesize — Rewrite in your own words (NO copy-paste)
-3. Publish to `src/**/01-notes/`, `src/**/02-exercises/`, `src/**/03-implementations/`, `src/**/04-discussions/`, `docs/`
-4. Cite RFC sections and specific claims where needed
+### Code (TypeScript/JavaScript)
 
-### Project Focus
-
-- **Protocol Accuracy**: WebRTC concepts, SDP/ICE flows, and signaling sequences must be correct.
-- **Code Quality**: Clear JavaScript/TypeScript with WebRTC-focused comments.
-- **Diagrams**: Mermaid + ASCII for signaling flows, ICE states, SFU/MCU topologies.
-
-### Code Style (JavaScript/TypeScript)
-
-- Meaningful names (`peerConnection`, `localStream`).
-- Comments explain WebRTC *why*, not just API *how*.
-- No hardcoded TURN credentials; use environment variables.
-
-### Documentation Standards
-
-- Review reports → `docs/reviews/`
-- RFC notes → `docs/rfc-notes/`
-- Topic notes → `src/**/01-notes/`
-- Teaching style: beginner-friendly, layman explanations, real-world use cases
+- Meaningful names; WebRTC-focused comments; no hardcoded secrets.
+- Root `npm run check` for workspace lint/typecheck.
 
 ---
 
-## Environment & Commands
-
-**Environment**: Windows, PowerShell, Node.js, TypeScript/JavaScript
-
-**Node.js workspace:**
+## Environment
 
 ```powershell
 npm ci
 npm run check
+cd src/<category>/<demo-name>
+npm install && npm start
 ```
-
-```powershell
-cd src/<category>/<topic>/03-implementations/<demo>
-npm install
-npm start
-```
-
----
-
-## Quality Checklist
-
-### Before Submitting Implementations
-
-- [ ] Runs on localhost or HTTPS as required.
-- [ ] Signaling sequence matches documented flow.
-- [ ] Media tracks and peer connection lifecycle handled correctly.
-- [ ] No hardcoded secrets.
-- [ ] Mermaid diagrams include ASCII fallbacks where applicable.
-
-### Content Review
-
-- [ ] Content is original synthesis (zero-copy policy).
-- [ ] WebRTC concepts explained before code.
-- [ ] Citations included for RFC sections and specific claims.

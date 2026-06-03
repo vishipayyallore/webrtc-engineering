@@ -131,14 +131,7 @@ npm run check
 
 See [docs/01-repository-structure.md](docs/01-repository-structure.md) for the full tree.
 
-Each topic under `src/` follows a **four-layer module** pattern:
-
-| Layer | Folder | Purpose |
-|-------|--------|---------|
-| 1 | `01-notes/` | Theory and first-person learning notes |
-| 2 | `02-exercises/` | Self-assessment (original synthesis only) |
-| 3 | `03-implementations/` | Runnable demos and servers |
-| 4 | `04-discussions/` | Worked examples and architecture walkthroughs |
+Demos are **self-contained applications** under `src/NN-category/demo-name/` (for example `src/06-small-projects/webcam-viewer/`). Each demo includes a README with purpose, run steps, and the WebRTC concepts it explores.
 
 ---
 
