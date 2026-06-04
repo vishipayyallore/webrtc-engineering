@@ -131,7 +131,12 @@ npm run check
 
 See [docs/01-repository-structure.md](docs/01-repository-structure.md) for the full tree.
 
-Demos are **self-contained applications** under `src/NN-category/demo-name/` (for example `src/06-small-projects/webcam-viewer/`). Each demo includes a README with purpose, run steps, and the WebRTC concepts it explores.
+| Area | Path | Role |
+|------|------|------|
+| Study modules | `src/<topic>/` | Notes and snippets by topic |
+| Demos | `demos/NNN-name/` | Numbered runnable WebRTC labs |
+| Projects | `projects/pNN-name/` | Larger integrated applications |
+| Experiments | `experiments/` | Codecs, bandwidth, SFU spikes |
 
 ---
 

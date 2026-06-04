@@ -11,6 +11,14 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "tools/**/*.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "demos/**/*.ts",
+    "demos/**/*.tsx",
+    "projects/**/*.ts",
+    "projects/**/*.tsx",
+    "tools/**/*.ts"
+  ],
   "exclude": ["node_modules", ".archive", "**/node_modules"]
 }

@@ -155,7 +155,6 @@ jobs:
       - name: Lint markdown in .cursor/.github/CLAUDE
         run: |
           npx --yes markdownlint-cli2 \
-            --config agent-guard.markdownlint-cli2.yaml \
             "CLAUDE.md" \
             ".cursor/skills.md" \
             ".cursor/skills/**/*.md" \

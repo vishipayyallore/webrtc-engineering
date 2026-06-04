@@ -12,7 +12,7 @@ Always apply `.cursor/rules/00_swamy_personal_learning_only.mdc` (Swamy-only sco
 
 ## Layout (this repo)
 
-**Demo applications** live under `src/NN-category/demo-name/` — each folder is a self-contained WebRTC app with README, code, and optional `package.json`. See `docs/01-repository-structure.md`.
+**Demo applications** live under `demos/NNN-name/` and **projects** under `projects/pNN-name/`. Study notes live under `src/<topic>/`. See `docs/01-repository-structure.md`.
 
 ## Agent skills (`SKILL.md`)
 
@@ -58,7 +58,7 @@ npm ci
 npm run check
 ```
 
-Per-topic demos under `src/NN-category/demo-name/` may have their own `package.json` — run `npm install` and `npm start` inside that folder.
+Per-demo or per-project folders may have their own `package.json` — run `npm install` and `npm start` inside that folder.
 
 ## CI checks (run locally)
 

@@ -22,9 +22,11 @@ This repository is **Swamy PKV's personal learning only**. It is **not** for any
 
 ### What This Repository Provides
 
-- **Demo applications**: Runnable WebRTC examples grouped by category under `src/`.
+- **Demos**: Numbered runnable labs under `demos/NNN-name/`.
+- **Projects**: Integrated apps under `projects/pNN-name/`.
+- **Study modules**: Topic notes and snippets under `src/<topic>/`.
 - **Supporting docs**: Architecture notes, RFC summaries, and diagrams under `docs/`.
-- **Experiments**: Bandwidth, codec, and load-testing under `experiments/`.
+- **Experiments**: Codecs, bandwidth, SFU, and load-testing under `experiments/`.
 
 ### Who this is for
 
@@ -36,26 +38,28 @@ This repository is **Swamy PKV's personal learning only**. It is **not** for any
 
 **Quick Reference:**
 
-- `src/NN-category/demo-name/` — Self-contained WebRTC demo apps (see `docs/01-repository-structure.md`).
-- `docs/` — Architecture notes, RFC summaries, diagrams, and agent documentation.
-- `experiments/` — Bandwidth, codec, and load-testing experiments.
+- `src/<topic>/` — Study modules (`fundamentals/`, `signaling/`, …).
+- `demos/NNN-name/` — Numbered WebRTC labs (see `docs/01-repository-structure.md`).
+- `projects/pNN-name/` — Larger integrated applications.
+- `docs/` — Architecture notes, RFC summaries, diagrams, agent documentation.
+- `experiments/` — Codecs, bandwidth, packet-loss, simulcast, SFU, load-testing.
 - `assets/` — Images, diagrams, and media assets.
-- `tools/` — PowerShell maintenance scripts; legacy Python converters archived under `.archive/tools/pyscripts/`.
+- `tools/` — Coturn, Docker, PowerShell scripts (`tools/scripts/`, `tools/psscripts/`).
 - `README.md` — Project overview and learning roadmap.
 
-**Demo application layout:**
-
-Each demo under `src/` is a standalone app folder with its own README, code, and optional `package.json`:
+**Demo layout:**
 
 ```text
-src/06-small-projects/webcam-viewer/
+demos/003-peer-connection/
 ├── README.md
 ├── package.json
 ├── public/
 └── src/
 ```
 
-**Category folders** use numbered prefixes: `01-fundamentals/`, `06-small-projects/`, etc. **Demo folders** use kebab-case. See `docs/01-repository-structure.md` for the full tree.
+**Project layout:** same pattern under `projects/p01-video-call/`, etc.
+
+See `docs/01-repository-structure.md` for the full tree.
 
 ---
 
@@ -87,7 +91,7 @@ The concept and path of source material are **internal-only** between the author
 
 1. Read from `source-material/` to understand concepts
 2. Synthesize — Rewrite in your own words (NO copy-paste)
-3. Publish original demo code and READMEs under `src/NN-category/demo-name/`, or reference notes under `docs/`
+3. Publish original demo/project code and READMEs under `demos/` or `projects/`, study notes under `src/<topic>/`, or reference docs under `docs/`
 4. Cite when using specific RFC sections, API definitions, or course claims
 
 **Zero-Copy Policy:**
@@ -117,7 +121,7 @@ The concept and path of source material are **internal-only** between the author
 
 - **Review reports**: All review reports go in `docs/reviews/`.
 - **RFC notes**: Protocol summaries go in `docs/rfc-notes/`.
-- **Demo READMEs**: Purpose, run steps, and WebRTC concepts for each app under `src/`.
+- **Demo READMEs**: Purpose, run steps, and WebRTC concepts for each app under `demos/` or `projects/`.
 
 ### Voice and Tone
 
@@ -139,9 +143,12 @@ When authoring or editing demo READMEs, `docs/`, or explanatory comments:
 
 **Category folder naming:**
 
-- Use numbered lowercase prefixes: `01-fundamentals/`, `02-signaling/`, `03-networking/`, etc.
-- Demo folders use kebab-case: `webcam-viewer/`, `video-call/`, `websocket-signaling/`.
-- Each demo includes `README.md`; add `package.json` when Node dependencies are needed.
+**Naming:**
+
+- **Demos:** `demos/NNN-kebab-case/` (e.g. `demos/001-getusermedia/`).
+- **Projects:** `projects/pNN-kebab-case/` (e.g. `projects/p01-video-call/`).
+- **Study modules:** `src/<topic>/` (e.g. `src/fundamentals/`).
+- Each demo/project includes `README.md`; add `package.json` when Node dependencies are needed.
 
 **No `00_` prefix**: Files and folders must NOT use the `00_` prefix.
 
@@ -159,7 +166,7 @@ npm run check
 **Node.js (implementations):**
 
 ```powershell
-cd src/<category>/<demo-name>
+cd demos/003-peer-connection
 npm install
 npm start
 ```
@@ -176,7 +183,7 @@ python .archive/tools/pyscripts/pdf_to_md.py --help
 
 When asking Copilot for help:
 
-- Name the demo and goal clearly (for example `src/06-small-projects/webcam-viewer/README.md` or the signaling server in that demo).
+- Name the demo and goal clearly (for example `demos/001-getusermedia/README.md` or `projects/p01-video-call/README.md`).
 - Ask for **(A)** plain-English intuition and/or **(B)** a small step-by-step walkthrough when introducing ICE, SDP, or codec negotiation.
 - Request runnable browser demos or Node signaling examples where appropriate.
 - Ask for Mermaid + ASCII signaling or topology diagrams when explaining architecture.
