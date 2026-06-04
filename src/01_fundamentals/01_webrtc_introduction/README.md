@@ -2,20 +2,22 @@
 
 ## Purpose
 
-I'm capturing what WebRTC is for in my own words before I wire up APIs in later demos.
+I'm building a clear mental model of what WebRTC is before I touch APIs in `06_demos`.
 
-## Concepts
+## Modules in this folder
 
-**Plain English:** WebRTC lets a browser (or Node with the right stack) send audio, video, or arbitrary data **directly** to another peer when possible, instead of always relaying everything through my server.
+| Note | Topic |
+|------|--------|
+| [what-is-webrtc.md](what-is-webrtc.md) | Definition, use cases, “peer-to-peer” nuance |
+| [why-webrtc-exists.md](why-webrtc-exists.md) | Why the web needed a real-time stack |
+| [prerequisites.md](prerequisites.md) | Skills I assume before deeper work |
 
-**Use case:** A two-person video call in the browser — the call still needs a small signaling channel to exchange connection metadata, but media can flow peer-to-peer once ICE finds a path.
+## Where this fits
 
-## What I plan to cover here
-
-- How this module fits the path: `01_fundamentals` → … → `06_demos`
-- Browser vs server roles (signaling vs media)
-- Permissions and HTTPS / localhost constraints for camera and mic
+```text
+01_webrtc_introduction  →  02_webrtc_architecture  →  …  →  06_demos
+```
 
 ## Status
 
-Notes placeholder — I'll expand as I study and synthesize (zero-copy: my own wording only).
+Synthesized study notes (my wording). Runnable code lives under `src/06_demos/` later in the path.

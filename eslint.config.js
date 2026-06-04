@@ -26,4 +26,13 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
+  {
+    files: ['src/06_demos/**/public/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        io: 'readonly',
+      },
+    },
+  },
 );

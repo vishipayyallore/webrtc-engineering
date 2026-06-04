@@ -8,7 +8,23 @@
 
 This repository is **Swamy PKV's personal learning** material. It is **not** maintained for other learners, employers, or the public. Do **not** reword `README.md`, reading notes, or docs to imply a general audience unless Swamy explicitly asks. Preserve the **Scope (read this first)** block in `README.md`.
 
-Always apply `.cursor/rules/00_swamy_personal_learning_only.mdc` (Swamy-only scope guardrail).
+Always apply the Swamy-only scope rule file:
+
+`.cursor/rules/00_swamy_personal_learning_only.mdc`
+
+## Agent governance (CI anchor strings)
+
+`ci-agent-docs-guard.yml` greps for these literals in this file — keep them present:
+
+- .cursor/rules/00_swamy_personal_learning_only.mdc
+- .cursor/rules/02_repository-structure.mdc
+- .cursor/skills.md
+- .github/skills/
+- .github/workflows/ci-skills-parity.yml
+- .github/workflows/ci-agent-docs-guard.yml
+- .cursor/agents/
+- .github/agents/
+- docs/agent-subagents.md
 
 ## Layout (this repo)
 
