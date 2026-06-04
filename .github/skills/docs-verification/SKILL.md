@@ -5,7 +5,7 @@ description: Verify markdown structure, demo folder layout, README quality, and 
 
 # Documentation Verification — WebRTC Engineering
 
-Demos are organized under `src/NN-category/demo-name/` as self-contained applications.
+Demos are organized under `src/06_demos/NN_name/` as self-contained applications. Concept notes live under `src/01_fundamentals/` … `src/05_architecture/`.
 
 ## Verification matrix
 

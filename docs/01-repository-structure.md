@@ -1,77 +1,139 @@
 # Repository Structure
 
-This layout separates **study notes** (`src/`), **incremental demos** (`demos/`), **integrated projects** (`projects/`), **experiments**, and **internal reference material** (`source-material/` — not listed in public docs).
+`src/` is a **numbered learning path** (consume in order). Infrastructure folders (`docs/`, `tools/`, `assets/`) are **not** numbered — there is no sequence among them.
+
+Internal reference material lives under `source-material/` (not listed in public docs).
 
 ```text
 webrtc-engineering/
 │
 ├── README.md
-├── LICENSE
-├── package.json              # root lint / typecheck (Node workspace)
+├── package.json
 │
-├── docs/
-│   ├── 01-repository-structure.md
-│   ├── agent-skills.md
-│   ├── agent-subagents.md
-│   ├── agent-governance-recovery.md
-│   ├── architecture/         # system / topology notes (SFU, mesh, signaling flows)
-│   ├── notes/                # synthesized learning notes
-│   ├── diagrams/             # exported or source diagram assets for docs
-│   ├── rfc-notes/            # RFC / spec summaries
-│   └── reviews/              # workspace audit reports
+├── docs/                     # not numbered — synthesized public docs
+├── tools/                    # not numbered — Coturn, Docker, scripts
+├── assets/                   # not numbered — shared images, diagrams, videos
 │
-├── source-material/          # INTERNAL ONLY — read-only staging (see cursor rules)
-│   ├── packt/
-│   ├── books/
-│   ├── articles/
-│   └── references/
-│
-├── src/                      # topic modules (notes, snippets — not full apps)
-│   ├── fundamentals/
-│   ├── signaling/
-│   ├── networking/
-│   ├── media/
-│   ├── architecture/
-│   ├── utilities/
-│   └── types/                # shared TypeScript baseline (repo-wide)
-│
-├── demos/                    # numbered, small, runnable WebRTC labs
-│   ├── 001-getusermedia/
-│   ├── 002-local-video-preview/
-│   ├── 003-peer-connection/
-│   ├── 004-data-channel-chat/
-│   ├── 005-screen-sharing/
-│   ├── 006-file-transfer/
-│   ├── 007-group-chat/
-│   └── ...
-│
-├── projects/                 # larger multi-part applications
-│   ├── p01-video-call/
-│   ├── p02-group-video-chat/
-│   ├── p03-virtual-classroom/
-│   ├── p04-webinar-platform/
-│   ├── p05-zoom-clone/
-│   └── ...
-│
-├── experiments/
-│   ├── codecs/
-│   ├── bandwidth/
-│   ├── packet-loss/
-│   ├── simulcast/
-│   ├── sfu/
-│   └── load-testing/
-│
-├── tools/
-│   ├── coturn/               # TURN server configs / helpers
-│   ├── docker/               # compose files, Dockerfiles
-│   ├── scripts/              # repo maintenance scripts (PowerShell)
-│   └── psscripts/            # existing PowerShell helpers (same role as scripts/)
-│
-└── assets/
-    ├── images/
-    ├── diagrams/
-    └── videos/
+└── src/                      # numbered curriculum (learning order)
+    ├── 01_fundamentals/
+    │   ├── 01_webrtc_introduction/
+    │   ├── 02_webrtc_architecture/
+    │   ├── 03_browser_apis/
+    │   └── 04_media_streams/
+    ├── 02_signaling/
+    │   ├── 01_websockets/
+    │   ├── 02_sdp/
+    │   ├── 03_offer_answer/
+    │   └── 04_signaling_server/
+    ├── 03_networking/
+    │   ├── 01_ice/
+    │   ├── 02_stun/
+    │   ├── 03_turn/
+    │   └── 04_nat_traversal/
+    ├── 04_media/
+    │   ├── 01_audio/
+    │   ├── 02_video/
+    │   ├── 03_screen_sharing/
+    │   └── 04_codecs/
+    ├── 05_architecture/
+    │   ├── 01_mesh/
+    │   ├── 02_sfu/
+    │   ├── 03_mcu/
+    │   └── 04_scalability/
+    ├── 06_demos/             # incremental runnable labs
+    │   ├── 01_getusermedia/
+    │   ├── 02_local_video_preview/
+    │   ├── …
+    │   └── 10_group_chat/
+    ├── 07_experiments/       # measurements and spikes
+    │   ├── 01_stun_vs_turn/
+    │   ├── …
+    │   └── 07_load_testing/
+    ├── 08_projects/          # integrated applications
+    │   ├── 01_video_call/
+    │   ├── …
+    │   └── 05_zoom_clone/
+    ├── types/                # shared TypeScript baseline (not numbered)
+    └── utilities/            # shared helpers (not numbered)
 ```
+
+---
+
+## Learning progression
+
+```text
+01–05  concepts (notes + small fragments)
+   ↓
+06     demos (one new idea per demo)
+   ↓
+07     experiments (often build on each other)
+   ↓
+08     projects (full applications)
+```
+
+---
+
+## What is numbered vs not
+
+| Numbered (sequence matters) | Not numbered (categories / tooling) |
+|---------------------------|-------------------------------------|
+| `src/01_fundamentals/` … `src/08_projects/` | `docs/`, `tools/`, `assets/` |
+| Nested lessons `01_webrtc_introduction/`, etc. | `src/types/`, `src/utilities/` |
+
+Avoid `01_docs/` or `02_tools/` — there is no lesson order across those trees.
+
+---
+
+## Naming rules
+
+- **Learning folders:** `NN_snake_case` (e.g. `06_demos/`, `01_getusermedia/`).
+- **Do not** use three-digit kebab-case at repo root (`001-getusermedia`) or `p01-` project prefixes — those are retired in favour of `src/08_projects/01_video_call/`.
+- **Markdown files** inside modules: kebab-case (`ice-overview.md`).
+
+---
+
+## Demo layout (`src/06_demos/NN_name/`)
+
+Each demo is self-contained:
+
+```text
+src/06_demos/04_peer_connection/
+├── README.md           # purpose, run steps, concepts
+├── package.json        # when Node dependencies are needed
+├── public/             # static client (typical)
+└── src/                # client and/or signaling server
+```
+
+**Order (planned):** `01_getusermedia` → `10_group_chat` (see folder names under `06_demos/`).
+
+---
+
+## Experiment layout (`src/07_experiments/NN_name/`)
+
+```text
+src/07_experiments/02_codec_comparison/
+├── README.md
+└── …
+```
+
+---
+
+## Project layout (`src/08_projects/NN_name/`)
+
+```text
+src/08_projects/01_video_call/
+├── README.md
+├── package.json
+├── client/
+├── server/
+└── …
+```
+
+---
+
+## Study modules (`src/01_fundamentals/` … `src/05_architecture/`)
+
+Notes and small fragments only — not full runnable apps (those live under `06_demos/` or `08_projects/`).
 
 ---
 
@@ -79,71 +141,13 @@ webrtc-engineering/
 
 | Path | Purpose |
 |------|---------|
-| `docs/` | Public synthesized documentation — architecture, RFC notes, diagrams |
-| `src/` | Topic-oriented study modules (markdown, small snippets, references between demos) |
-| `demos/` | Short, numbered, runnable browser/Node labs — one WebRTC idea each |
-| `projects/` | End-to-end applications combining multiple WebRTC concepts |
-| `experiments/` | Measurements and spikes (codecs, bandwidth, SFU behaviour, load tests) |
-| `tools/` | Coturn, Docker, and maintenance automation |
+| `docs/` | Architecture, RFC notes, diagrams, reviews |
+| `src/01_*` … `src/05_*` | Concept modules in learning order |
+| `src/06_demos/` | Numbered runnable WebRTC labs |
+| `src/07_experiments/` | Codecs, bandwidth, SFU, load tests, etc. |
+| `src/08_projects/` | End-to-end applications |
+| `src/types/`, `src/utilities/` | Shared code (no sequence index) |
+| `tools/` | Coturn, Docker, maintenance automation |
 | `assets/` | Shared media and diagram assets |
 
 Do **not** name or describe `source-material/` in `README.md`, issue templates, or other public-facing docs.
-
----
-
-## Demo layout (`demos/NNN-name/`)
-
-Each demo is a **self-contained** folder:
-
-```text
-demos/003-peer-connection/
-├── README.md           # purpose, run steps, concepts (first-person notes OK)
-├── package.json        # when Node dependencies are needed
-├── public/             # static client (typical)
-├── src/                # client and/or signaling server (TS/JS)
-└── ...
-```
-
-**Naming:** three-digit prefix + kebab-case (`001-getusermedia`, `004-data-channel-chat`).
-
----
-
-## Project layout (`projects/pNN-name/`)
-
-Same idea as demos, but scope is a **full application** (multiple pages, signaling service, deployment notes):
-
-```text
-projects/p01-video-call/
-├── README.md
-├── package.json
-├── client/
-├── server/
-└── ...
-```
-
-**Naming:** `p` + two-digit index + kebab-case (`p01-video-call`, `p05-zoom-clone`).
-
----
-
-## Study modules (`src/<topic>/`)
-
-Use for **topic-aligned notes and small code fragments**, not full runnable apps (those live under `demos/` or `projects/`):
-
-```text
-src/fundamentals/
-├── media-streams.md
-└── ...
-```
-
-**Naming:** lowercase topic folders (`fundamentals/`, `signaling/`, `networking/`).
-
----
-
-## Progression (suggested)
-
-1. Read / write notes under `src/` and `docs/`
-2. Build numbered demos in order under `demos/`
-3. Combine skills in `projects/`
-4. Tune and measure under `experiments/`
-
-When writing or updating public-facing structure, do not list internal-only paths.

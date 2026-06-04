@@ -12,7 +12,7 @@ Always apply `.cursor/rules/00_swamy_personal_learning_only.mdc` (Swamy-only sco
 
 ## Layout (this repo)
 
-**Demo applications** live under `demos/NNN-name/` and **projects** under `projects/pNN-name/`. Study notes live under `src/<topic>/`. See `docs/01-repository-structure.md`.
+**Learning path** lives under `src/01_fundamentals/` … `src/08_projects/` (numbered). Demos: `src/06_demos/NN_name/`. Projects: `src/08_projects/NN_name/`. See `docs/01-repository-structure.md`.
 
 ## Agent skills (`SKILL.md`)
 

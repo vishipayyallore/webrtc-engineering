@@ -24,7 +24,7 @@ What WebRTC capability or learning goal does this support?
 
 ## Proposed Location
 
-- `src/NN-category/demo-name/` (e.g. `src/06-small-projects/webcam-viewer/`)
+- `src/06_demos/NN_name/` (e.g. `src/06_demos/01_getusermedia/`)
 - `docs/` for reference notes
 
 ## Additional Context

@@ -133,10 +133,12 @@ See [docs/01-repository-structure.md](docs/01-repository-structure.md) for the f
 
 | Area | Path | Role |
 |------|------|------|
-| Study modules | `src/<topic>/` | Notes and snippets by topic |
-| Demos | `demos/NNN-name/` | Numbered runnable WebRTC labs |
-| Projects | `projects/pNN-name/` | Larger integrated applications |
-| Experiments | `experiments/` | Codecs, bandwidth, SFU spikes |
+| Concepts | `src/01_fundamentals/` … `src/05_architecture/` | Numbered study modules |
+| Demos | `src/06_demos/NN_name/` | Incremental runnable labs |
+| Experiments | `src/07_experiments/NN_name/` | Measurements and spikes |
+| Projects | `src/08_projects/NN_name/` | Integrated applications |
+| Shared | `src/types/`, `src/utilities/` | Not numbered |
+| Docs / tools / assets | `docs/`, `tools/`, `assets/` | Not numbered |
 
 ---
 

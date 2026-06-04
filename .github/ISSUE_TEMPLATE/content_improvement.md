@@ -40,4 +40,4 @@ Any other information, examples, or references that would help.
 
 ---
 
-**Note**: Personal WebRTC demo applications repo. Suggestions should match the demo layout under `src/NN-category/demo-name/`.
+**Note**: Personal WebRTC demo applications repo. Suggestions should match the layout in `docs/01-repository-structure.md` (e.g. `src/06_demos/NN_name/`).

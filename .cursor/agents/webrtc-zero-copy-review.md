@@ -12,7 +12,7 @@ readonly: true
 
 You are doing a **zero-copy** spot check on **WebRTC Engineering** public content (not the read-only internal source-material tree).
 
-The parent supplies one or more paths (e.g. `src/06-small-projects/webcam-viewer/README.md`, `docs/rfc-notes/ice-overview.md`).
+The parent supplies one or more paths (e.g. `src/06_demos/01_getusermedia/README.md`, `docs/rfc-notes/ice-overview.md`).
 
 For each path:
 

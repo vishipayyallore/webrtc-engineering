@@ -16,6 +16,16 @@ D:.
 |   README.md
 |   tsconfig.json
 |   
++---assets
+|   +---diagrams
+|   |       .gitkeep
+|   |       
+|   +---images
+|   |       .gitkeep
+|   |       
+|   \---videos
+|           .gitkeep
+|           
 +---docs
 |   |   01-repository-structure.md
 |   |   agent-governance-recovery.md
@@ -42,88 +52,140 @@ D:.
 |           .gitkeep
 |           
 +---src
-|   +---architecture
-|   |       .gitkeep
-|   |       
-|   +---assets
-|   |   +---diagrams
+|   +---01_fundamentals
+|   |   +---01_webrtc_introduction
+|   |   |       README.md
+|   |   |       
+|   |   +---02_webrtc_architecture
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---images
+|   |   +---03_browser_apis
 |   |   |       .gitkeep
 |   |   |       
-|   |   \---videos
+|   |   \---04_media_streams
 |   |           .gitkeep
 |   |           
-|   +---demos
-|   |   +---001-getusermedia
+|   +---02_signaling
+|   |   +---01_websockets
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---002-local-video-preview
+|   |   +---02_sdp
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---003-peer-connection
+|   |   +---03_offer_answer
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---004-data-channel-chat
-|   |   |       .gitkeep
-|   |   |       
-|   |   +---005-screen-sharing
-|   |   |       .gitkeep
-|   |   |       
-|   |   +---006-file-transfer
-|   |   |       .gitkeep
-|   |   |       
-|   |   \---007-group-chat
+|   |   \---04_signaling_server
 |   |           .gitkeep
 |   |           
-|   +---experiments
-|   |   +---bandwidth
+|   +---03_networking
+|   |   +---01_ice
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---codecs
+|   |   +---02_stun
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---load-testing
+|   |   +---03_turn
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---packet-loss
-|   |   |       .gitkeep
-|   |   |       
-|   |   +---sfu
-|   |   |       .gitkeep
-|   |   |       
-|   |   \---simulcast
+|   |   \---04_nat_traversal
 |   |           .gitkeep
 |   |           
-|   +---fundamentals
-|   |       .gitkeep
-|   |       
-|   +---media
-|   |       .gitkeep
-|   |       
-|   +---networking
-|   |       .gitkeep
-|   |       
-|   +---projects
-|   |   +---p01-video-call
+|   +---04_media
+|   |   +---01_audio
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---p02-group-video-chat
+|   |   +---02_video
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---p03-virtual-classroom
+|   |   +---03_screen_sharing
 |   |   |       .gitkeep
 |   |   |       
-|   |   +---p04-webinar-platform
-|   |   |       .gitkeep
-|   |   |       
-|   |   \---p05-zoom-clone
+|   |   \---04_codecs
 |   |           .gitkeep
 |   |           
-|   +---signaling
-|   |       .gitkeep
-|   |       
+|   +---05_architecture
+|   |   +---01_mesh
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---02_sfu
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---03_mcu
+|   |   |       .gitkeep
+|   |   |       
+|   |   \---04_scalability
+|   |           .gitkeep
+|   |           
+|   +---06_demos
+|   |   +---01_getusermedia
+|   |   |       README.md
+|   |   |       
+|   |   +---02_local_video_preview
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---03_signaling_server
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---04_peer_connection
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---05_offer_answer
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---06_ice_candidates
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---07_data_channel_chat
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---08_screen_sharing
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---09_file_transfer
+|   |   |       .gitkeep
+|   |   |       
+|   |   \---10_group_chat
+|   |           .gitkeep
+|   |           
+|   +---07_experiments
+|   |   +---01_stun_vs_turn
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---02_codec_comparison
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---03_bandwidth_control
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---04_packet_loss_simulation
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---05_simulcast
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---06_sfu_scalability
+|   |   |       .gitkeep
+|   |   |       
+|   |   \---07_load_testing
+|   |           .gitkeep
+|   |           
+|   +---08_projects
+|   |   +---01_video_call
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---02_group_video_chat
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---03_virtual_classroom
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---04_webinar_platform
+|   |   |       .gitkeep
+|   |   |       
+|   |   \---05_zoom_clone
+|   |           .gitkeep
+|   |           
 |   +---types
 |   |       global.d.ts
 |   |       

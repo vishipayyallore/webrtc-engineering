@@ -36,7 +36,7 @@ globs: *.md, *.html, *.js, *.ts
 
 ## Demo documentation
 
-Each demo under `src/NN-category/demo-name/` should include a **README.md** with:
+Each demo under `src/06_demos/NN_name/` should include a **README.md** with:
 
 1. **Purpose** — what WebRTC capability this demo explores
 2. **Run steps** — how to start it (localhost/HTTPS requirements)

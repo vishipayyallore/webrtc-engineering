@@ -40,7 +40,7 @@ When migrating content from `source-material/`:
 
 1. **Read** from `source-material/` to understand concepts
 2. **Synthesize** - Rewrite in your own words (NO copy-paste)
-3. **Publish** to demo folders (`src/NN-category/demo-name/`) or `docs/`
+3. **Publish** to `src/06_demos/`, `src/08_projects/`, concept modules `src/01_*` … `src/05_*`, or `docs/`
 4. **Cite** when using specific RFC sections, API definitions, or course claims
 
 ## Zero-Copy Policy

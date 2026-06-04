@@ -21,7 +21,7 @@ description: Comprehensive workspace review for WebRTC Engineering — structure
 ## Archive handling
 
 - `.archive/` is legacy tooling and old content; do not flag as stale active content unless Swamy asks to migrate it.
-- Reviews should focus on active `src/` demos plus governance/tooling consistency.
+- Reviews should focus on `src/06_demos/`, `src/08_projects/`, and governance/tooling consistency with `docs/01-repository-structure.md`.
 
 ## Output
 

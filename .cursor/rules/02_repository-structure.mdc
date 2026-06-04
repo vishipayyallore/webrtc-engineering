@@ -9,16 +9,12 @@ globs: *
 
 ## Quick Summary
 
-- **`src/<topic>/`**: Study modules (notes, snippets) — `fundamentals/`, `signaling/`, `networking/`, etc.
-- **`demos/NNN-name/`**: Numbered runnable WebRTC labs (`001-getusermedia/`, …).
-- **`projects/pNN-name/`**: Larger integrated apps (`p01-video-call/`, …).
-- **`docs/`**: Architecture, notes, diagrams, RFC summaries.
-- **`experiments/`**: Codecs, bandwidth, packet-loss, simulcast, SFU, load-testing.
-- **`tools/`**: Coturn, Docker, scripts (PowerShell maintenance).
-- **`assets/`**: Shared images, diagrams, videos.
+- **`src/01_fundamentals/` … `src/05_architecture/`**: Numbered concept modules (`NN_lesson/` inside each).
+- **`src/06_demos/NN_name/`**: Incremental runnable WebRTC labs (`01_getusermedia/`, …).
+- **`src/07_experiments/NN_name/`**: Measurements and spikes (`01_stun_vs_turn/`, …).
+- **`src/08_projects/NN_name/`**: Integrated applications (`01_video_call/`, …).
+- **`src/types/`, `src/utilities/`**: Shared code — **not** numbered.
+- **`docs/`, `tools/`, `assets/`**: Support trees — **not** numbered (no lesson sequence).
+- **`.archive/`**: Legacy content; leave unless Swamy asks to migrate.
 
 Do not list internal-only paths in public-facing docs.
-
-## Preserved archives
-
-- `.archive/` — legacy tooling and content; leave unless Swamy asks to migrate.
