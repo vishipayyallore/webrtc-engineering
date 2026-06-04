@@ -1,0 +1,23 @@
+description: Repository structure for WebRTC Engineering
+globs: *
+---
+# Repository Structure
+
+**Project**: WebRTC Engineering — demo applications repository
+
+> **Single Source of Truth**: For the complete and detailed repository structure, naming conventions, and workflow standards, refer to [docs/01-repository-structure.md](../../docs/01-repository-structure.md).
+
+## Quick Summary
+
+- **`src/NN-category/demo-name/`**: Self-contained WebRTC demo apps grouped by area (fundamentals, signaling, small projects, etc.).
+- **`docs/`**: Architecture notes, RFC summaries, diagrams, and reviews.
+- **`experiments/`**: Bandwidth, codec, and load-testing experiments.
+- **`assets/`**: Images, diagrams, and media assets.
+- **`tools/`**: PowerShell maintenance scripts (`psscripts/`).
+
+When writing or updating public-facing structure (for example `README.md` or `docs/01-repository-structure.md`), do not list or mention any internal-only paths.
+
+## Preserved archives
+
+- `.archive/` contains legacy tooling and old content. Leave it as-is unless Swamy explicitly asks to migrate or clean it.
+- Routine parity, docs, and CI reviews should focus on active `src/` demos and governance/tooling consistency.

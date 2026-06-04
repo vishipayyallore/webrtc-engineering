@@ -1,0 +1,47 @@
+---
+description: Key guidelines extracted from copilot-instructions.md for AI assistants
+globs: *
+---
+# Copilot Instructions Extract
+
+**Source**: `.github/copilot-instructions.md`
+**Purpose**: Key guidelines for AI assistants working on this repository
+
+---
+
+## Repository Context
+
+**WebRTC Engineering** is a personal demo-applications workspace for real-time communication systems.
+
+### Demo layout
+
+Self-contained apps under `src/NN-category/demo-name/` with README, code, and optional `package.json`.
+
+---
+
+## Development Guidelines
+
+### Source Material
+
+- Internal reference material is **read-only** — never edit or mention in public docs.
+- Migration: read → synthesize → publish demo code/READMEs under `src/` or notes under `docs/`.
+
+### Zero-Copy
+
+- Original synthesis in READMEs and docs; no verbatim course paste.
+
+### Code (TypeScript/JavaScript)
+
+- Meaningful names; WebRTC-focused comments; no hardcoded secrets.
+- Root `npm run check` for workspace lint/typecheck.
+
+---
+
+## Environment
+
+```powershell
+npm ci
+npm run check
+cd src/<category>/<demo-name>
+npm install && npm start
+```

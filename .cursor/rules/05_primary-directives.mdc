@@ -1,0 +1,43 @@
+---
+description: Primary directives for WebRTC Engineering
+globs: *
+---
+# Primary Directives
+
+## Project Focus
+
+This is a **Personal Learning Workspace** for WebRTC Engineering that:
+
+- Builds hands-on browser demos and signaling servers in JavaScript/TypeScript
+- Provides clear, structured notes in Markdown on WebRTC concepts and protocols
+- Explores media pipelines, ICE/STUN/TURN, and SFU/MCU architectures
+- Prioritizes protocol understanding and runnable implementations
+
+### Educational Philosophy
+
+- **Educational first**: Prioritize clarity, correctness, and explainability over premature optimization.
+- **Beginner friendly**: Default to beginner-friendly explanations before advanced phrasing.
+- **Real-world grounded**: When teaching a concept, connect it to realistic use cases (video calls, telehealth, contact centers, live streaming).
+- **Layman explanation**: Use everyday language before WebRTC jargon or implementation detail.
+- **Diagrams**: Use Mermaid diagrams with ASCII fallbacks for signaling flows, ICE states, and topology comparisons.
+- **Hands-on mindset**: Prefer runnable demos and small servers over abstract-only notes.
+- **Document intent**: Update docs when structure, behavior, or learning flow changes.
+
+## Current State
+
+- ✅ Active Learning: Ongoing WebRTC engineering study
+- ✅ Tech Stack: WebRTC, JavaScript, TypeScript, Node.js, Express, Socket.IO, Coturn, Docker
+- ❌ NOT Python-first: Legacy PDF converters live under `.archive/tools/pyscripts/` only
+- ❌ NOT a Production Deployment: Code is for learning and experimentation unless explicitly marked otherwise.
+
+## Documentation Accuracy
+
+- Notes must accurately reflect WebRTC protocol behavior and architecture trade-offs.
+- Signaling sequence diagrams must match the described offer/answer and ICE flow.
+- Code comments should explain the *why* of WebRTC steps, not just the *how* of the API call.
+
+## Code Maintenance
+
+- Browser demos should run on localhost or HTTPS as required by the APIs used.
+- Separate reusable logic into modules within each demo folder where appropriate.
+- Use TypeScript for non-trivial implementations when the topic folder already uses it.

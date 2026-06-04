@@ -1,0 +1,49 @@
+description: Rules for creating educational content and notes
+globs: *.md, *.html, *.js, *.ts
+---
+# Educational Content Rules
+
+**Context**: Personal WebRTC demo applications and hands-on practice.
+**Priority**: HIGH
+
+## Core principles
+
+### Academic integrity (zero-copy)
+- **Original synthesis**: Do not copy-paste directly from textbooks, lecture slides, course handouts, or RFC text. Read, understand, and write in your own words.
+- **Citation**: If referencing a specific RFC section, API definition, or formal claim, cite the source.
+- **Review strictness**: Reviewers should reject content that looks like direct copying or close paraphrase.
+- **Examples must be original**: Do not reuse institutional examples verbatim; create fresh scenarios in your own words.
+
+### Clarity and structure
+- **Concept first**: Explain the WebRTC concept in the demo README (or comments) before diving into implementation detail.
+- **Visuals**: Use signaling-flow and topology diagrams when they clarify ICE, SDP, or media paths. Include Mermaid diagrams with ASCII fallbacks wherever a visual explanation is applicable.
+
+### Plain English or worked example (every concept)
+- **Minimum**: For each concept a demo teaches, provide at least one of **(A)** a plain-English explanation or **(B)** a worked example in the README or code comments.
+- **Beginner-friendly default**: Write for revision after a gap. Use simple wording first, then add technical precision.
+- **Layman explanation**: Explain the idea in everyday language before moving to jargon or implementation detail.
+- **Real-world use cases**: Attach at least one realistic use case (video call, screen share, webinar, telehealth) where it helps.
+
+### Code in demos
+- **Comments**: Explain the WebRTC reason for the step (ICE gathering, track lifecycle, SDP negotiation), not just syntax.
+- **Variable names**: Use descriptive names (`peerConnection` over `pc`, `localStream` over `ls`).
+- **Secrets**: Never hardcode TURN credentials or API keys; use environment variables.
+
+## Voice and tone
+- **Personal learning journey**: Write demo READMEs as Swamy's first-person learning notes where appropriate.
+- **Reflection-oriented**: Prefer "I'm learning…", "I plan to…", and "I want to be able to…" over generic instructor phrasing.
+- **Avoid course framing**: Do not title docs as "Course …" or write like a lecturer.
+
+## Demo documentation
+
+Each demo under `src/NN-category/demo-name/` should include a **README.md** with:
+
+1. **Purpose** — what WebRTC capability this demo explores
+2. **Run steps** — how to start it (localhost/HTTPS requirements)
+3. **Concepts** — plain-English notes on protocols/APIs used
+4. **Optional**: diagram of signaling or media flow
+
+## Markdown standards
+- Use H2 (`##`) for main topics and H3 (`###`) for subtopics.
+- Use blockquotes (`>`) for definitions or key takeaways when helpful.
+- Use tables for summarizing codec trade-offs, topology comparisons, or ICE candidate types.

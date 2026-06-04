@@ -1,0 +1,12 @@
+node_modules
+.archive
+.venv
+dist
+coverage
+package-lock.json
+**/*.md
+.github/**
+.copilot/**
+.cursor/**
+.claude/**
+tools/psscripts/**

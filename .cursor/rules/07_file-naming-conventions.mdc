@@ -1,0 +1,21 @@
+description: Naming conventions for demos, scripts, and docs
+globs: *
+---
+# File Naming Conventions
+
+## Demo applications
+
+- **Category folders:** numbered lowercase prefix (e.g. `01-fundamentals/`, `06-small-projects/`).
+- **Demo folders:** kebab-case (e.g. `webcam-viewer/`, `video-call/`).
+- **Each demo** includes `README.md` at its root; add `package.json` when the demo uses Node dependencies.
+
+## JavaScript/TypeScript
+- Use camelCase for variables and functions; PascalCase for classes/components.
+- Demo source files use kebab-case or camelCase consistent with the demo's existing style.
+
+## Images & Figures
+- Use descriptive kebab-case names under `assets/` or within a demo's `public/` folder.
+- **Example**: `ice-gathering-states.png`
+
+## Documentation (`docs/`)
+- Use kebab-case markdown filenames (e.g. `ice-overview.md`, `sfu-vs-mcu.md`).
