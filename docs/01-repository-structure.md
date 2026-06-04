@@ -59,7 +59,7 @@ webrtc-engineering/
 
 **No `src/assets/`** — shared media belongs under root `assets/`.
 
-**No `src/types/` or `src/utilities/` until needed** — add when the first shared type or helper is real, not as empty placeholders.
+**No `src/types/` or `src/utilities/` until needed** — add under `src/` when the first shared demo code exists. Root `types/global.d.ts` is workspace tooling only (not a lesson).
 
 ---
 
