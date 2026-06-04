@@ -1,0 +1,8 @@
+# Relaxed rules for ci-agent-docs-guard (YAML frontmatter + long agent descriptions)
+config:
+  default: true
+  MD013:
+    line_length: 500
+    code_blocks: false
+    tables: false
+  MD060: false

@@ -8,6 +8,8 @@
 
 This repository is **Swamy PKV's personal learning** material. It is **not** maintained for other learners, employers, or the public. Do **not** reword `README.md`, reading notes, or docs to imply a general audience unless Swamy explicitly asks. Preserve the **Scope (read this first)** block in `README.md`.
 
+Always apply `.cursor/rules/00_swamy_personal_learning_only.mdc` (Swamy-only scope guardrail).
+
 ## Layout (this repo)
 
 **Demo applications** live under `src/NN-category/demo-name/` — each folder is a self-contained WebRTC app with README, code, and optional `package.json`. See `docs/01-repository-structure.md`.
