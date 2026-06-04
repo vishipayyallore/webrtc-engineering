@@ -42,7 +42,7 @@ This repository is **Swamy PKV's personal learning only**. It is **not** for any
 - `src/06_demos/` — Runnable WebRTC labs (`01_getusermedia/`, …).
 - `src/07_experiments/` — Measurements and spikes (`01_stun_vs_turn/`, …).
 - `src/08_projects/` — Full applications (`01_video_call/`, …).
-- `src/types/`, `src/utilities/` — Shared code (not numbered).
+- Add `src/types/` or `src/utilities/` only when the first shared code exists (no empty placeholders).
 - `docs/` — Public synthesized docs (not numbered).
 - `assets/` — Shared images, diagrams, videos (not numbered).
 - `tools/` — Coturn, Docker, PowerShell scripts (`tools/scripts/`, `tools/psscripts/`).
@@ -148,7 +148,7 @@ When authoring or editing demo READMEs, `docs/`, or explanatory comments:
 
 - **Learning folders:** `NN_snake_case` under `src/` (e.g. `06_demos/01_getusermedia/`, `08_projects/01_video_call/`).
 - **Concept modules:** `src/01_fundamentals/01_webrtc_introduction/`, etc.
-- **Not numbered:** `docs/`, `tools/`, `assets/`, `src/types/`, `src/utilities/`.
+- **Not numbered:** `docs/`, `tools/`, `assets/` (root only — never `src/assets/`).
 - Each demo/project includes `README.md`; add `package.json` when Node dependencies are needed.
 
 **No `00_` prefix**: Files and folders must NOT use the `00_` prefix.

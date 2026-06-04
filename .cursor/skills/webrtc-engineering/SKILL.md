@@ -15,9 +15,7 @@ Numbered **learning path** under `src/`:
 - `06_demos/NN_name/` — incremental runnable labs (e.g. `06_demos/01_getusermedia/`)
 - `07_experiments/NN_name/` — measurements and spikes
 - `08_projects/NN_name/` — integrated applications (e.g. `08_projects/01_video_call/`)
-- `types/`, `utilities/` — shared code (**not** numbered)
-
-**Not numbered:** `docs/`, `tools/`, `assets/` — no lesson sequence.
+**Not numbered:** `docs/`, `tools/`, root `assets/` — no lesson sequence. Do not put assets under `src/`. Add `types/` or `utilities/` under `src/` only when the first shared code exists.
 
 Each demo typically includes:
 

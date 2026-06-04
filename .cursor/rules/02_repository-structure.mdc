@@ -13,8 +13,9 @@ globs: *
 - **`src/06_demos/NN_name/`**: Incremental runnable WebRTC labs (`01_getusermedia/`, …).
 - **`src/07_experiments/NN_name/`**: Measurements and spikes (`01_stun_vs_turn/`, …).
 - **`src/08_projects/NN_name/`**: Integrated applications (`01_video_call/`, …).
-- **`src/types/`, `src/utilities/`**: Shared code — **not** numbered.
-- **`docs/`, `tools/`, `assets/`**: Support trees — **not** numbered (no lesson sequence).
+- **`assets/`** (repo root): Shared media — **not** under `src/`.
+- **`docs/`, `tools/`**: Support trees — **not** numbered.
+- **`src/types/`, `src/utilities/`**: Create only when first shared code is needed (no empty placeholders).
 - **`.archive/`**: Legacy content; leave unless Swamy asks to migrate.
 
 Do not list internal-only paths in public-facing docs.

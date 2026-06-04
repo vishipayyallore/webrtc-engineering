@@ -137,8 +137,7 @@ See [docs/01-repository-structure.md](docs/01-repository-structure.md) for the f
 | Demos | `src/06_demos/NN_name/` | Incremental runnable labs |
 | Experiments | `src/07_experiments/NN_name/` | Measurements and spikes |
 | Projects | `src/08_projects/NN_name/` | Integrated applications |
-| Shared | `src/types/`, `src/utilities/` | Not numbered |
-| Docs / tools / assets | `docs/`, `tools/`, `assets/` | Not numbered |
+| Docs / tools / assets | `docs/`, `tools/`, `assets/` | Not numbered (no `src/assets/`) |
 
 ---
 

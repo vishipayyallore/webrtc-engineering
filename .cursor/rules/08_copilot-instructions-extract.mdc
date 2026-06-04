@@ -15,7 +15,7 @@ globs: *
 
 ### Layout
 
-Numbered learning path under `src/` (`01_fundamentals/` … `08_projects/`). Runnable demos: `src/06_demos/NN_name/`. Not numbered: `docs/`, `tools/`, `assets/`, `src/types/`, `src/utilities/`.
+Numbered learning path under `src/` (`01_fundamentals/` … `08_projects/`). Demos: `src/06_demos/NN_name/` (e.g. `03_websocket_signaling`). Not numbered: `docs/`, `tools/`, root `assets/`. Add `src/types/` or `src/utilities/` only when shared code exists.
 
 ---
 

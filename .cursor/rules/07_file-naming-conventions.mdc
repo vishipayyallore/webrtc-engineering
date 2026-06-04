@@ -6,7 +6,8 @@ globs: *
 ## Learning content under `src/`
 
 - **Number when sequence matters:** `01_fundamentals/`, `06_demos/`, `01_getusermedia/` — use `NN_snake_case`.
-- **Do not number infrastructure:** `docs/`, `tools/`, `assets/`, `src/types/`, `src/utilities/`.
+- **Do not number infrastructure:** `docs/`, `tools/`, `assets/` (repo root).
+- **Demo names:** concept-first (e.g. `03_websocket_signaling`, not `03_signaling_server`).
 - **Each demo** under `src/06_demos/` includes `README.md` at its root; add `package.json` when the demo uses Node dependencies.
 
 ## JavaScript/TypeScript
