@@ -1,0 +1,162 @@
+Folder PATH listing for volume LordKrishna
+Volume serial number is 8E01-4C28
+D:.
+|   .gitignore
+|   .markdownlint-cli2.yaml
+|   .markdownlint.json
+|   .prettierignore
+|   .prettierrc.json
+|   AGENTS.md
+|   CLAUDE.md
+|   eslint.config.js
+|   LICENSE
+|   lychee.toml
+|   package-lock.json
+|   package.json
+|   README.md
+|   tsconfig.json
+|   
++---docs
+|   |   01-repository-structure.md
+|   |   agent-governance-recovery.md
+|   |   agent-skills.md
+|   |   agent-subagents.md
+|   |   
+|   +---architecture
+|   |       .gitkeep
+|   |       
+|   +---diagrams
+|   |       .gitkeep
+|   |       
+|   +---images
+|   +---notes
+|   |       .gitkeep
+|   |       
+|   +---references
+|   |       PowerShell_Commands.md
+|   |       
+|   +---reviews
+|   |       .gitkeep
+|   |       
+|   \---rfc-notes
+|           .gitkeep
+|           
++---src
+|   +---architecture
+|   |       .gitkeep
+|   |       
+|   +---assets
+|   |   +---diagrams
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---images
+|   |   |       .gitkeep
+|   |   |       
+|   |   \---videos
+|   |           .gitkeep
+|   |           
+|   +---demos
+|   |   +---001-getusermedia
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---002-local-video-preview
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---003-peer-connection
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---004-data-channel-chat
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---005-screen-sharing
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---006-file-transfer
+|   |   |       .gitkeep
+|   |   |       
+|   |   \---007-group-chat
+|   |           .gitkeep
+|   |           
+|   +---experiments
+|   |   +---bandwidth
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---codecs
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---load-testing
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---packet-loss
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---sfu
+|   |   |       .gitkeep
+|   |   |       
+|   |   \---simulcast
+|   |           .gitkeep
+|   |           
+|   +---fundamentals
+|   |       .gitkeep
+|   |       
+|   +---media
+|   |       .gitkeep
+|   |       
+|   +---networking
+|   |       .gitkeep
+|   |       
+|   +---projects
+|   |   +---p01-video-call
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---p02-group-video-chat
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---p03-virtual-classroom
+|   |   |       .gitkeep
+|   |   |       
+|   |   +---p04-webinar-platform
+|   |   |       .gitkeep
+|   |   |       
+|   |   \---p05-zoom-clone
+|   |           .gitkeep
+|   |           
+|   +---signaling
+|   |       .gitkeep
+|   |       
+|   +---types
+|   |       global.d.ts
+|   |       
+|   \---utilities
+|           .gitkeep
+|           
+\---tools
+    |   README.md
+    |   
+    +---coturn
+    |       .gitkeep
+    |       
+    +---docker
+    |       .gitkeep
+    |       
+    +---psscripts
+    |       Compare-DocFiles.ps1
+    |       Convert-SourceMaterialPdfsToMarkdown.ps1
+    |       Export-Diagrams.ps1
+    |       Export-RepoTree.ps1
+    |       Find-DuplicateContent.ps1
+    |       Get-FileStats.ps1
+    |       Get-MarkdownSummary.ps1
+    |       Get-RepoStats.ps1
+    |       Quick-HealthCheck.ps1
+    |       README.md
+    |       RepoConfig.psd1
+    |       Run-AllPSScripts.ps1
+    |       Run-MarkdownLintAndLychee.ps1
+    |       Test-ContentCompliance.ps1
+    |       Validate-FileReferences.ps1
+    |       Verify-ZeroCopy.ps1
+    |       
+    \---scripts
+            .gitkeep
+            
