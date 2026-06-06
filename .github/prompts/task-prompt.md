@@ -6,7 +6,7 @@
 
 **Structure:**
 
-- `src/NN-category/demo-name/` — self-contained demos (README, code, optional `package.json`)
+- `src/06_demos/NN_name/` — self-contained demos (README, code, optional `package.json`)
 - `docs/` — architecture notes, RFC summaries, reviews
 - `experiments/` — bandwidth, codec, load tests
 - `tools/psscripts/` — PowerShell maintenance scripts

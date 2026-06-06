@@ -13,9 +13,9 @@ globs: *
 
 **WebRTC Engineering** is a personal demo-applications workspace for real-time communication systems.
 
-### Demo layout
+### Layout
 
-Self-contained apps under `src/NN-category/demo-name/` with README, code, and optional `package.json`.
+Numbered learning path under `src/` (`01_fundamentals/` … `08_projects/`). Demos: `src/06_demos/NN_name/` (e.g. `03_websocket_signaling`). Not numbered: `docs/`, `tools/`, root `assets/`. Add `src/types/` or `src/utilities/` only when shared code exists.
 
 ---
 
@@ -24,7 +24,7 @@ Self-contained apps under `src/NN-category/demo-name/` with README, code, and op
 ### Source Material
 
 - Internal reference material is **read-only** — never edit or mention in public docs.
-- Migration: read → synthesize → publish demo code/READMEs under `src/` or notes under `docs/`.
+- Migration: read → synthesize → publish under `src/06_demos/`, `src/08_projects/`, concept modules `src/01_*` … `src/05_*`, or `docs/`.
 
 ### Zero-Copy
 
@@ -42,6 +42,6 @@ Self-contained apps under `src/NN-category/demo-name/` with README, code, and op
 ```powershell
 npm ci
 npm run check
-cd src/<category>/<demo-name>
+cd src/06_demos/01_getusermedia
 npm install && npm start
 ```

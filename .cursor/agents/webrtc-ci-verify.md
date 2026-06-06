@@ -17,6 +17,6 @@ When invoked:
 1. Read exact commands from `.github/skills/ci-checks/SKILL.md` (do not invent flags).
 2. From the repository root, run **`npm run check`** (typecheck + eslint + prettier), then **markdownlint-cli2** with the globs in that skill.
 3. Report each check as PASS or FAIL with the minimal failing output (file + rule/error).
-4. If a demo under `src/NN-category/demo-name/` was edited, note whether its local `npm start` should be run.
+4. If a demo under `src/06_demos/NN_name/` was edited, note whether its local `npm start` should be run.
 
 Do not edit files in this subagent unless the parent explicitly asks you to fix failures after reporting.

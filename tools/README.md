@@ -1,8 +1,13 @@
 # tools
 
-Repository-local helper scripts (**not** `src/` application code).
+Repository-local helpers (**not** application code under `src/06_demos/` or `src/08_projects/`).
 
-- [PowerShell helpers — `psscripts/README.md`](psscripts/README.md)
-- [Legacy Python utilities (archived) — `.archive/tools/pyscripts/README.md`](../.archive/tools/pyscripts/README.md)
+| Path | Purpose |
+|------|---------|
+| [scripts/](scripts/) | Repo maintenance scripts (PowerShell) — target home for helpers |
+| [psscripts/](psscripts/) | Existing PowerShell helpers (same role as `scripts/` during transition) |
+| [psscripts/Export-RepoTree.ps1](psscripts/Export-RepoTree.ps1) | ASCII repo tree → `.archive/folderstructure.txt` (skips dot-folders, `node_modules`, etc.) |
+| [coturn/](coturn/) | TURN / Coturn configs and notes |
+| [docker/](docker/) | Docker Compose and container helpers |
 
-**WebRTC demos** live under `src/NN-category/demo-name/` with their own `package.json` when needed. Root `package.json` supplies workspace-wide ESLint, Prettier, and TypeScript checks.
+**WebRTC apps** live under `src/06_demos/` and `src/08_projects/`. Root `package.json` supplies workspace-wide ESLint, Prettier, and TypeScript checks.

@@ -1,0 +1,3 @@
+# markdownlint-cli2 — used by ci-documentation.yml (via default discovery)
+config:
+  extends: .markdownlint.json

@@ -14,7 +14,7 @@ T - Testable Success (npm start works, README complete)
 
 ## Repo alignment
 
-- Demos live under `src/NN-category/demo-name/`
+- Demos live under `src/06_demos/NN_name/` (numbered learning path under `src/`)
 - Each demo: **README** + code + optional **package.json**
 - Reference material in `docs/` — not a fixed notes/quizzes/notebooks layout
 
@@ -23,7 +23,7 @@ T - Testable Success (npm start works, README complete)
 ```
 ROLE: WebRTC Engineer — browser video call demo
 
-MISSION: Add src/06-small-projects/webcam-viewer/ with getUserMedia + local preview
+MISSION: Add src/06_demos/01_getusermedia/ with getUserMedia + local preview
 
 CONTEXT: Personal demo repo (Swamy only); Node 20+; TypeScript preferred
 

@@ -6,10 +6,12 @@
     '.cursor'
     '.claude'
     'docs'
+    'assets'
     'source-material'
     'src'
     'tools'
     'tools\psscripts'
+    'tools\scripts'
     '.github'
     '.cursor\rules'
   )

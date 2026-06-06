@@ -8,9 +8,27 @@
 
 This repository is **Swamy PKV's personal learning** material. It is **not** maintained for other learners, employers, or the public. Do **not** reword `README.md`, reading notes, or docs to imply a general audience unless Swamy explicitly asks. Preserve the **Scope (read this first)** block in `README.md`.
 
+Always apply the Swamy-only scope rule file:
+
+`.cursor/rules/00_swamy_personal_learning_only.mdc`
+
+## Agent governance (CI anchor strings)
+
+`ci-agent-docs-guard.yml` greps for these literals in this file — keep them present:
+
+- .cursor/rules/00_swamy_personal_learning_only.mdc
+- .cursor/rules/02_repository-structure.mdc
+- .cursor/skills.md
+- .github/skills/
+- .github/workflows/ci-skills-parity.yml
+- .github/workflows/ci-agent-docs-guard.yml
+- .cursor/agents/
+- .github/agents/
+- docs/agent-subagents.md
+
 ## Layout (this repo)
 
-**Demo applications** live under `src/NN-category/demo-name/` — each folder is a self-contained WebRTC app with README, code, and optional `package.json`. See `docs/01-repository-structure.md`.
+**Learning path** lives under `src/01_fundamentals/` … `src/08_projects/` (numbered). Demos: `src/06_demos/NN_name/`. Projects: `src/08_projects/NN_name/`. See `docs/01-repository-structure.md`.
 
 ## Agent skills (`SKILL.md`)
 
@@ -56,7 +74,7 @@ npm ci
 npm run check
 ```
 
-Per-topic demos under `src/NN-category/demo-name/` may have their own `package.json` — run `npm install` and `npm start` inside that folder.
+Per-demo or per-project folders may have their own `package.json` — run `npm install` and `npm start` inside that folder.
 
 ## CI checks (run locally)
 

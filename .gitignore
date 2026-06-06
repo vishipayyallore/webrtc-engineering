@@ -429,5 +429,5 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
-# Source Material
-source-material/
+# Source Material — content is local-only; folder skeleton is tracked via .gitkeep
+source-material/**

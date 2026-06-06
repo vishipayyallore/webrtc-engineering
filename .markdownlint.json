@@ -1,0 +1,24 @@
+{
+  "default": true,
+  "MD013": {
+    "line_length": 120,
+    "code_blocks": false,
+    "tables": false
+  },
+  "MD060": false,
+  "overrides": [
+    {
+      "files": [
+        "CLAUDE.md",
+        "AGENTS.md",
+        ".cursor/skills.md",
+        ".cursor/skills/**",
+        ".github/skills/**",
+        ".cursor/agents/**",
+        ".github/agents/**"
+      ],
+      "MD013": false,
+      "MD060": false
+    }
+  ]
+}

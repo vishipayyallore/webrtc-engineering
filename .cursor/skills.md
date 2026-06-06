@@ -12,7 +12,7 @@ This file is **local to `webrtc-engineering`**. It complements `.cursor/rules/*.
 
 ## Demo applications (this repo)
 
-Self-contained apps under `src/NN-category/demo-name/` (for example `src/06-small-projects/webcam-viewer/`). Each demo includes a README with purpose, run steps, and WebRTC concepts.
+Numbered learning path under `src/` (`01_fundamentals/` … `08_projects/`). Runnable demos: `src/06_demos/NN_name/` (e.g. `src/06_demos/01_getusermedia/`). Each demo includes a README with purpose, run steps, and WebRTC concepts.
 
 See `docs/01-repository-structure.md`.
 

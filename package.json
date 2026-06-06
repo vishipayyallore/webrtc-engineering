@@ -10,8 +10,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx}\" eslint.config.js",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\" eslint.config.js",
+    "format:check": "prettier --check \"types/**/*.ts\" \"src/**/*.{ts,tsx,js,mjs,cjs}\" eslint.config.js --no-error-on-unmatched-pattern",
+    "format": "prettier --write \"types/**/*.ts\" \"src/**/*.{ts,tsx,js,mjs,cjs}\" eslint.config.js --no-error-on-unmatched-pattern",
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm run lint && npm run format:check"
   },

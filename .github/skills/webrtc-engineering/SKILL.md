@@ -9,7 +9,13 @@ description: Work on webrtc-engineering — WebRTC demo applications under src/,
 
 ## Layout
 
-Self-contained **demo apps** live under `src/NN-category/demo-name/` (for example `src/06-small-projects/webcam-viewer/`).
+Numbered **learning path** under `src/`:
+
+- `01_fundamentals/` … `05_architecture/` — concept notes (`NN_lesson/` inside each)
+- `06_demos/NN_name/` — incremental runnable labs (e.g. `06_demos/01_getusermedia/`)
+- `07_experiments/NN_name/` — measurements and spikes
+- `08_projects/NN_name/` — integrated applications (e.g. `08_projects/01_video_call/`)
+**Not numbered:** `docs/`, `tools/`, root `assets/` — no lesson sequence. Do not put assets under `src/`. Add `types/` or `utilities/` under `src/` only when the first shared code exists.
 
 Each demo typically includes:
 
@@ -17,7 +23,7 @@ Each demo typically includes:
 - Application code (HTML/JS/TS, optional Node signaling server)
 - `package.json` when Node dependencies are needed
 
-See `docs/01-repository-structure.md` for the category tree.
+See `docs/01-repository-structure.md` for the full tree.
 
 ## Related
 

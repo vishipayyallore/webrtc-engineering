@@ -22,9 +22,11 @@ This repository is **Swamy PKV's personal learning only**. It is **not** for any
 
 ### What This Repository Provides
 
-- **Demo applications**: Runnable WebRTC examples grouped by category under `src/`.
-- **Supporting docs**: Architecture notes, RFC summaries, and diagrams under `docs/`.
-- **Experiments**: Bandwidth, codec, and load-testing under `experiments/`.
+- **Study path**: Numbered modules under `src/01_fundamentals/` … `src/08_projects/` (see `docs/01-repository-structure.md`).
+- **Demos**: Incremental labs under `src/06_demos/NN_name/`.
+- **Experiments**: Spikes under `src/07_experiments/NN_name/`.
+- **Projects**: Integrated apps under `src/08_projects/NN_name/`.
+- **Supporting docs**: Architecture notes, RFC summaries, and diagrams under `docs/` (not numbered).
 
 ### Who this is for
 
@@ -36,26 +38,29 @@ This repository is **Swamy PKV's personal learning only**. It is **not** for any
 
 **Quick Reference:**
 
-- `src/NN-category/demo-name/` — Self-contained WebRTC demo apps (see `docs/01-repository-structure.md`).
-- `docs/` — Architecture notes, RFC summaries, diagrams, and agent documentation.
-- `experiments/` — Bandwidth, codec, and load-testing experiments.
-- `assets/` — Images, diagrams, and media assets.
-- `tools/` — PowerShell maintenance scripts; legacy Python converters archived under `.archive/tools/pyscripts/`.
+- `src/01_fundamentals/` … `src/05_architecture/` — Concept modules (numbered lessons inside each).
+- `src/06_demos/` — Runnable WebRTC labs (`01_getusermedia/`, …).
+- `src/07_experiments/` — Measurements and spikes (`01_stun_vs_turn/`, …).
+- `src/08_projects/` — Full applications (`01_video_call/`, …).
+- Add `src/types/` or `src/utilities/` only when the first shared code exists (no empty placeholders).
+- `docs/` — Public synthesized docs (not numbered).
+- `assets/` — Shared images, diagrams, videos (not numbered).
+- `tools/` — Coturn, Docker, PowerShell scripts (`tools/scripts/`, `tools/psscripts/`).
 - `README.md` — Project overview and learning roadmap.
 
-**Demo application layout:**
-
-Each demo under `src/` is a standalone app folder with its own README, code, and optional `package.json`:
+**Demo layout:**
 
 ```text
-src/06-small-projects/webcam-viewer/
+src/06_demos/04_peer_connection/
 ├── README.md
 ├── package.json
 ├── public/
 └── src/
 ```
 
-**Category folders** use numbered prefixes: `01-fundamentals/`, `06-small-projects/`, etc. **Demo folders** use kebab-case. See `docs/01-repository-structure.md` for the full tree.
+**Project layout:** same pattern under `src/08_projects/01_video_call/`, etc.
+
+See `docs/01-repository-structure.md` for the full tree.
 
 ---
 
@@ -87,7 +92,7 @@ The concept and path of source material are **internal-only** between the author
 
 1. Read from `source-material/` to understand concepts
 2. Synthesize — Rewrite in your own words (NO copy-paste)
-3. Publish original demo code and READMEs under `src/NN-category/demo-name/`, or reference notes under `docs/`
+3. Publish original demo/project code under `src/06_demos/` or `src/08_projects/`, study notes under `src/01_fundamentals/` … `src/05_architecture/`, or reference docs under `docs/`
 4. Cite when using specific RFC sections, API definitions, or course claims
 
 **Zero-Copy Policy:**
@@ -117,7 +122,7 @@ The concept and path of source material are **internal-only** between the author
 
 - **Review reports**: All review reports go in `docs/reviews/`.
 - **RFC notes**: Protocol summaries go in `docs/rfc-notes/`.
-- **Demo READMEs**: Purpose, run steps, and WebRTC concepts for each app under `src/`.
+- **Demo READMEs**: Purpose, run steps, and WebRTC concepts for each app under `src/06_demos/` or `src/08_projects/`.
 
 ### Voice and Tone
 
@@ -139,9 +144,12 @@ When authoring or editing demo READMEs, `docs/`, or explanatory comments:
 
 **Category folder naming:**
 
-- Use numbered lowercase prefixes: `01-fundamentals/`, `02-signaling/`, `03-networking/`, etc.
-- Demo folders use kebab-case: `webcam-viewer/`, `video-call/`, `websocket-signaling/`.
-- Each demo includes `README.md`; add `package.json` when Node dependencies are needed.
+**Naming:**
+
+- **Learning folders:** `NN_snake_case` under `src/` (e.g. `06_demos/01_getusermedia/`, `08_projects/01_video_call/`).
+- **Concept modules:** `src/01_fundamentals/01_webrtc_introduction/`, etc.
+- **Not numbered:** `docs/`, `tools/`, `assets/` (root only — never `src/assets/`).
+- Each demo/project includes `README.md`; add `package.json` when Node dependencies are needed.
 
 **No `00_` prefix**: Files and folders must NOT use the `00_` prefix.
 
@@ -159,7 +167,7 @@ npm run check
 **Node.js (implementations):**
 
 ```powershell
-cd src/<category>/<demo-name>
+cd src/06_demos/04_peer_connection
 npm install
 npm start
 ```
@@ -176,7 +184,7 @@ python .archive/tools/pyscripts/pdf_to_md.py --help
 
 When asking Copilot for help:
 
-- Name the demo and goal clearly (for example `src/06-small-projects/webcam-viewer/README.md` or the signaling server in that demo).
+- Name the demo and goal clearly (for example `src/06_demos/01_getusermedia/README.md` or `src/08_projects/01_video_call/README.md`).
 - Ask for **(A)** plain-English intuition and/or **(B)** a small step-by-step walkthrough when introducing ICE, SDP, or codec negotiation.
 - Request runnable browser demos or Node signaling examples where appropriate.
 - Ask for Mermaid + ASCII signaling or topology diagrams when explaining architecture.
