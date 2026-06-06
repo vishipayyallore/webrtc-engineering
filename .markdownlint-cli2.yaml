@@ -1,3 +1,10 @@
 # markdownlint-cli2 — used by ci-documentation.yml (via default discovery)
 config:
   extends: .markdownlint.json
+globs:
+  - "README.md"
+  - "docs/**/*.md"
+  - "src/**/*.md"
+  - "tools/**/*.md"
+ignores:
+  - "**/node_modules/**"
