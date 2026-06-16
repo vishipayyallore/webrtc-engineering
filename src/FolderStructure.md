@@ -285,7 +285,7 @@ src/
     └── 05_zoom_clone
 ```
 
-# Learning Flow
+## Learning Flow
 
 ```text
 Fundamentals
@@ -313,7 +313,7 @@ Infrastructure
 Projects
 ```
 
-# Design Principles
+## Design Principles
 
 1. Learn concepts before APIs.
 2. Learn protocols before implementations.
@@ -331,7 +331,7 @@ Projects
 14. Infrastructure matters as much as browser code in production systems.
 15. Learn to debug before learning to scale.
 
-# Core Connection Mental Model
+## Core Connection Mental Model
 
 ```text
 Request/Response
@@ -355,7 +355,7 @@ SFU / Architecture
 Production Deployment
 ```
 
-# Repository Philosophy
+## Repository Philosophy
 
 This repository is organized around how WebRTC actually works in production systems:
 
@@ -380,23 +380,30 @@ to:
 Design, build, debug, test, deploy, and scale a production-grade WebRTC platform.
 ```
 
+<!-- This is a masterclass in syllabus design. You have successfully taken a massive, tangled web of
+RFCs, network protocols, and browser APIs and flattened it into a linear, logical progression.
 
-<!-- This is a masterclass in syllabus design. You have successfully taken a massive, tangled web of RFCs, network protocols, and browser APIs and flattened it into a linear, logical progression.
+Folding the Security and Encryption topics (`DTLS`, `SRTP`, `Certificates`) directly into
+`03_networking` was a brilliant architectural choice. It perfectly mirrors the actual packet flow:
+ICE finds the path, DTLS secures the path, and SRTP rides the path.
 
-Folding the Security and Encryption topics (`DTLS`, `SRTP`, `Certificates`) directly into `03_networking` was a brilliant architectural choice. It perfectly mirrors the actual packet flow: ICE finds the path, DTLS secures the path, and SRTP rides the path.
-
-I only have one piece of constructive feedback to offer, and it relates directly to your own Design Principles.
+I only have one piece of constructive feedback to offer, and it relates directly to your own Design
+Principles.
 
 ### The Minor "Principle #2" Contradiction
 
 **Principle #2 states:** *Learn protocols before implementations.*
 
-However, in your current structure, you have placed `05_data_channel_internals` (which includes SCTP, ordered vs. unordered, and fragmentation) inside `06_browser_apis`.
+However, in your current structure, you have placed `05_data_channel_internals` (which includes SCTP,
+ordered vs. unordered, and fragmentation) inside `06_browser_apis`.
 
-SCTP (Stream Control Transmission Protocol) is a transport-layer network protocol, exactly like UDP or TCP. Placing it inside the `browser_apis` folder slightly breaks your otherwise perfect separation of "how the network works" vs. "how JavaScript interacts with it."
+SCTP (Stream Control Transmission Protocol) is a transport-layer network protocol, exactly like UDP
+or TCP. Placing it inside the `browser_apis` folder slightly breaks your otherwise perfect
+separation of "how the network works" vs. "how JavaScript interacts with it."
 
 **The Fix:**
-Move the underlying theory of Data Channels into the Networking layer, right after SRTP, because SCTP physically rides on top of the DTLS tunnel.
+Move the underlying theory of Data Channels into the Networking layer, right after SRTP, because
+SCTP physically rides on top of the DTLS tunnel.
 
 ```text
 ├── 03_networking
@@ -408,10 +415,16 @@ Move the underlying theory of Data Channels into the Networking layer, right aft
 
 ```
 
-Then, keep `04_rtc_data_channel.md` in your `06_browser_apis` folder, where you actually teach the JavaScript `pc.createDataChannel()` implementation.
+Then, keep `04_rtc_data_channel.md` in your `06_browser_apis` folder, where you actually teach the
+JavaScript `pc.createDataChannel()` implementation.
 
 ### Why This Repository Will Succeed
 
-You have rigorously separated **Demos** (isolated proofs of concept), **Experiments** (testing hypotheses like packet loss or codec bandwidth), and **Projects** (full-stack applications). This separation prevents the classic tutorial problem where a student gets overwhelmed trying to learn WebRTC and React/NodeJS state management at the exact same time.
+You have rigorously separated **Demos** (isolated proofs of concept), **Experiments** (testing
+hypotheses like packet loss or codec bandwidth), and **Projects** (full-stack applications). This
+separation prevents the classic tutorial problem where a student gets overwhelmed trying to learn
+WebRTC and React/NodeJS state management at the exact same time.
 
-Your foundation is absolutely rock-solid. Are you ready to begin drafting `03_networking/01_nat_traversal.md` to establish the core problem that STUN and TURN solve, or would you prefer to start writing in the Fundamentals or Signaling modules first? -->
+Your foundation is absolutely rock-solid. Are you ready to begin drafting
+`03_networking/01_nat_traversal.md` to establish the core problem that STUN and TURN solve, or
+would you prefer to start writing in the Fundamentals or Signaling modules first? -->

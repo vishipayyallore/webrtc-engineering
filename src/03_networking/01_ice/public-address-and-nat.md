@@ -2,7 +2,9 @@
 
 ## Problem
 
-Two people on residential Wi‑Fi each sit behind a router. Their laptops have **private** IPs; the internet only routes to the router’s **public** IP. For a direct call, ICE must discover usable **candidate** addresses on each side.
+Two people on residential Wi‑Fi each sit behind a router. Their laptops have **private** IPs;
+the internet only routes to the router's **public** IP. For a direct call, ICE must discover usable
+**candidate** addresses on each side.
 
 ## What has to be true
 
@@ -11,8 +13,8 @@ descriptions; ICE verifies they work.
 
 ## STUN and TURN in one line
 
-- **STUN** — “help me learn my reflexive public mapping.”
-- **TURN** — “if direct fails, send traffic through you.”
+- **STUN** — "help me learn my reflexive public mapping."
+- **TURN** — "if direct fails, send traffic through you."
 
 ## Worked example
 
