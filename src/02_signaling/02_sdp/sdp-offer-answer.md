@@ -22,8 +22,6 @@ Think of SDP as a **capabilities negotiation document**.
 
 ### Connection Lifecycle Diagram
 
-#### Mermaid
-
 ```mermaid
 flowchart LR
     SDP["SDP Negotiation"]
@@ -36,7 +34,7 @@ flowchart LR
     DTLS --> SRTP
 ```
 
-#### ASCII Diagram
+**ASCII Fallback:**
 
 ```text
 SDP Negotiation
@@ -83,8 +81,6 @@ Glares (both sides offering simultaneously) require a negotiation policy; I lear
 
 ### Offer Answer Sequence Diagram
 
-#### Mermaid
-
 ```mermaid
 sequenceDiagram
     participant A as Caller
@@ -110,7 +106,7 @@ sequenceDiagram
     B-->>A: ICE Candidates
 ```
 
-#### ASCII Diagram
+**ASCII Fallback:**
 
 ```text
 Caller                  Callee
@@ -387,8 +383,6 @@ The signaling format changes, but the negotiation pattern remains the same.
 
 ### SDP Negotiation Process Diagram
 
-#### Mermaid
-
 ```mermaid
 flowchart TD
     A["Describe Capabilities"]
@@ -403,7 +397,7 @@ flowchart TD
     D --> E
 ```
 
-#### ASCII Diagram
+**ASCII Fallback:**
 
 ```text
 Describe Capabilities
