@@ -6,7 +6,7 @@ I keep a **session-level** picture here before protocol specifics in `02_signali
 
 ## Notes
 
-- [four-steps.md](four-steps.md) — signaling → connecting → securing → communicating
+- [01-four-steps.md](01-four-steps.md) — signaling → connecting → securing → communicating
 
 ## Status
 

@@ -8,9 +8,9 @@ I'm building a clear mental model of what WebRTC is before I touch APIs in `06_d
 
 | Note | Topic |
 |------|--------|
-| [what-is-webrtc.md](what-is-webrtc.md) | Definition, use cases, “peer-to-peer” nuance |
-| [why-webrtc-exists.md](why-webrtc-exists.md) | Why the web needed a real-time stack |
-| [prerequisites.md](prerequisites.md) | Skills I assume before deeper work |
+| [01-prerequisites.md](01-prerequisites.md) | Skills I assume before deeper work |
+| [02-why-webrtc-exists.md](02-why-webrtc-exists.md) | Why the web needed a real-time stack |
+| [03-what-is-webrtc.md](03-what-is-webrtc.md) | Definition, use cases, "peer-to-peer" nuance |
 
 ## Where this fits
 

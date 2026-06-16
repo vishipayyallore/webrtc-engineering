@@ -121,8 +121,8 @@ Practice (build and measure):
 
 | # | Folder | Entry | Notes |
 |---|--------|-------|-------|
-| 01 | [01_webrtc_introduction/](01_fundamentals/01_webrtc_introduction/) | [README](01_fundamentals/01_webrtc_introduction/README.md) | [What is WebRTC?](01_fundamentals/01_webrtc_introduction/what-is-webrtc.md) · [Why WebRTC exists](01_fundamentals/01_webrtc_introduction/why-webrtc-exists.md) · [Prerequisites](01_fundamentals/01_webrtc_introduction/prerequisites.md) |
-| 02 | [02_webrtc_architecture/](01_fundamentals/02_webrtc_architecture/) | [README](01_fundamentals/02_webrtc_architecture/README.md) | [Four steps](01_fundamentals/02_webrtc_architecture/four-steps.md) |
+| 01 | [01_webrtc_introduction/](01_fundamentals/01_webrtc_introduction/) | [README](01_fundamentals/01_webrtc_introduction/README.md) | [Prerequisites](01_fundamentals/01_webrtc_introduction/01-prerequisites.md) · [Why WebRTC exists](01_fundamentals/01_webrtc_introduction/02-why-webrtc-exists.md) · [What is WebRTC?](01_fundamentals/01_webrtc_introduction/03-what-is-webrtc.md) |
+| 02 | [02_webrtc_architecture/](01_fundamentals/02_webrtc_architecture/) | [README](01_fundamentals/02_webrtc_architecture/README.md) | [Four steps](01_fundamentals/02_webrtc_architecture/01-four-steps.md) |
 | 03 | [03_browser_apis/](01_fundamentals/03_browser_apis/) | *(placeholder)* | |
 | 04 | [04_media_streams/](01_fundamentals/04_media_streams/) | *(placeholder)* | |
 | 05 | [05_rtc_peer_connection/](01_fundamentals/05_rtc_peer_connection/) | *(placeholder)* | |
