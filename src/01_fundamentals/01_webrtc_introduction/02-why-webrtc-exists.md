@@ -1,6 +1,6 @@
 # Why WebRTC Exists
 
-## The Old Pattern: Everything Through My Server
+## 1. The Old Pattern: Everything Through My Server
 
 In classic web chat systems and many early video products, **my server** often carried every byte between users.
 
@@ -22,7 +22,7 @@ For many web applications, that approach works well.
 
 ---
 
-## Why That Breaks at Scale for Live Media
+## 2. Why That Breaks at Scale for Live Media
 
 Voice and video are very different from text messages.
 
@@ -83,7 +83,7 @@ At large scale, relaying every media packet becomes expensive.
 
 ---
 
-## Another Reason the Classic Web Struggled
+## 3. Another Reason the Classic Web Struggled
 
 Traditional web traffic primarily uses **TCP**.
 
@@ -154,7 +154,7 @@ WebRTC provides a browser-safe way to use UDP-based real-time communication.
 
 ---
 
-## The Design Goal
+## 4. The Design Goal
 
 Engineers wanted endpoints to exchange live data **without requiring a central relay for every
 media packet**, whenever the network allows it.
@@ -201,7 +201,7 @@ When a direct path works, media can travel without a relay in the middle.
 
 ---
 
-## What Actually Shipped
+## 5. What Actually Shipped
 
 Browsers received a standardized real-time communication stack.
 
@@ -269,7 +269,7 @@ Signaling
 
 ---
 
-## Why I Am Studying It Now
+## 6. Why I Am Studying It Now
 
 Real-time communication is no longer a niche feature.
 
@@ -292,7 +292,7 @@ Understanding WebRTC helps me:
 
 ---
 
-## What I Should Remember
+## 7. What I Should Remember
 
 * Traditional web traffic was not designed for low-latency media.
 * TCP prioritizes reliability; real-time communication often prioritizes latency.

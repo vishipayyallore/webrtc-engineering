@@ -1,6 +1,6 @@
 # What WebRTC Is
 
-## Plain English
+## 1. Plain English
 
 WebRTC (**Web Real-Time Communication**) is a collection of browser APIs, protocols, and standards
 that allow applications to exchange **live data** with **low latency**.
@@ -20,7 +20,7 @@ for page refreshes, polling intervals, or manual synchronization.
 
 ---
 
-## WebRTC Is Not One Thing
+## 2. WebRTC Is Not One Thing
 
 WebRTC is often discussed as if it were a single technology.
 
@@ -91,7 +91,7 @@ Browser APIs
 
 ---
 
-## Where I See It In The Wild
+## 3. Where I See It In The Wild
 
 WebRTC appears in far more places than video meetings.
 
@@ -113,7 +113,7 @@ Different products use different pieces of WebRTC, but the underlying ideas rema
 
 ---
 
-## Is It Peer-to-Peer?
+## 4. Is It Peer-to-Peer?
 
 **Partly.**
 
@@ -191,7 +191,7 @@ flowchart LR
 
 ---
 
-## Four Phases I Keep In Mind
+## 5. Four Phases I Keep In Mind
 
 I use a simple mental model for every WebRTC connection.
 
@@ -252,7 +252,7 @@ The phases are:
 
 ---
 
-## Real-World Anchor
+## 6. Real-World Anchor
 
 Consider a two-person telehealth consultation.
 
@@ -317,7 +317,7 @@ TURN acts as a fallback when direct connectivity cannot be established.
 
 ---
 
-## What I Should Remember
+## 7. What I Should Remember
 
 * WebRTC enables low-latency communication.
 * WebRTC is not a single protocol; it is a collection of technologies.

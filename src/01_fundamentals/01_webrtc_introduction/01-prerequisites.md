@@ -1,6 +1,6 @@
 # Prerequisites (for my path)
 
-## Goal
+## 1. Goal
 
 This repository teaches WebRTC, not general web development.
 
@@ -11,7 +11,7 @@ When I forget details, I prefer referencing MDN or official documentation rather
 
 ---
 
-## Core Web Skills
+## 2. Core Web Skills
 
 I assume I am comfortable with:
 
@@ -23,7 +23,7 @@ These skills are sufficient for following the browser examples throughout this r
 
 ---
 
-## Helpful but Not Blocking
+## 3. Helpful but Not Blocking
 
 | Topic                 | Why it helps                                                                                                             |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -36,7 +36,7 @@ I do not need to be an expert in these topics before starting.
 
 ---
 
-## Networking Expectations
+## 4. Networking Expectations
 
 I do **not** need to understand:
 
@@ -104,7 +104,7 @@ WebRTC exists partly to help establish reliable communication paths across these
 
 ---
 
-## How I Study Weak Areas
+## 5. How I Study Weak Areas
 
 If networking feels fuzzy, I pair the networking notes with practical experiments only after I understand the terminology.
 
@@ -118,7 +118,7 @@ If Node.js feels rusty, I start with the signaling demos before moving into peer
 
 ---
 
-## Learning Path
+## 6. Learning Path
 
 The repository is designed to build understanding incrementally.
 
@@ -173,7 +173,7 @@ I focus on understanding concepts first, then protocols, then browser APIs, and 
 
 ---
 
-## What I Should Remember
+## 7. What I Should Remember
 
 * WebRTC assumes basic web development knowledge.
 * JavaScript and async programming are the most important prerequisites.
