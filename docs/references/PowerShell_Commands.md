@@ -22,7 +22,8 @@ Custom excludes (replaces the default list):
 .\tools\psscripts\Export-RepoTree.ps1 -ExcludeDirNames @('.git', 'node_modules')
 ```
 
-Default excluded folder names: `.archive`, `.git`, `.github`, `.cursor`, `.claude`, `.copilot`, `.vs`, `.vscode`, `source-material`, `node_modules`, `bin`, `obj`, `dist`, `coverage`, `TestResults`.
+Default excluded folder names: `.archive`, `.git`, `.github`, `.cursor`, `.claude`, `.copilot`, `.vs`,
+`.vscode`, `source-material`, `node_modules`, `bin`, `obj`, `dist`, `coverage`, `TestResults`.
 
 ## Why not `Get-ChildItem | tree`
 

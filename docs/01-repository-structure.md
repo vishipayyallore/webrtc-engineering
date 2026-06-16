@@ -1,6 +1,7 @@
 # Repository Structure
 
-`src/` is a **numbered learning path** (consume in order). Infrastructure folders (`docs/`, `tools/`, `assets/`) live at the **repo root** and are **not** numbered.
+`src/` is a **numbered learning path** (consume in order). Infrastructure folders (`docs/`, `tools/`,
+`assets/`) live at the **repo root** and are **not** numbered.
 
 Internal reference material lives under `source-material/` (not listed in public docs).
 
@@ -59,7 +60,8 @@ webrtc-engineering/
 
 **No `src/assets/`** — shared media belongs under root `assets/`.
 
-**No `src/types/` or `src/utilities/` until needed** — add under `src/` when the first shared demo code exists. Root `types/global.d.ts` is workspace tooling only (not a lesson).
+**No `src/types/` or `src/utilities/` until needed** — add under `src/` when the first shared demo
+code exists. Root `types/global.d.ts` is workspace tooling only (not a lesson).
 
 ---
 

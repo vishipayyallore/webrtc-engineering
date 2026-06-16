@@ -153,7 +153,7 @@ It answers:
 Can packets travel between peers?
 ```
 
-### Common States
+### Common States (ICE)
 
 | State          | Meaning                                       |
 | -------------- | --------------------------------------------- |
@@ -187,7 +187,7 @@ appears afterwards.
 
 Applications should not depend on seeing `completed`.
 
-### Typical Failure Clues
+### Typical Failure Clues (ICE)
 
 If ICE reaches:
 
@@ -203,7 +203,7 @@ possible causes include:
 * Incorrect TURN credentials
 * Network path unavailable
 
-### Event
+### Event (ICE Connection State)
 
 ```javascript
 pc.oniceconnectionstatechange = () => {
@@ -250,7 +250,7 @@ It answers:
 Is the peer connection usable?
 ```
 
-### Common States
+### Common States (Connection)
 
 | State          | Meaning                                 |
 | -------------- | --------------------------------------- |
@@ -292,7 +292,7 @@ Examples:
 * Transport shutdown
 * Critical connection failure
 
-### Event
+### Event (Connection State)
 
 ```javascript
 pc.onconnectionstatechange = () => {

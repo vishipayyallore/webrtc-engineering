@@ -2,7 +2,8 @@
 
 ## Purpose
 
-I'm building a small **real-time messaging** lab to understand bidirectional sockets before I attach WebRTC session metadata. The same server shape later forwards SDP and ICE JSON.
+I'm building a small **real-time messaging** lab to understand bidirectional sockets before I attach
+WebRTC session metadata. The same server shape later forwards SDP and ICE JSON.
 
 ## Why this demo exists in the path
 
@@ -22,12 +23,15 @@ npm install
 npm start
 ```
 
-3. Open **http://localhost:4000** (override with `$env:PORT=3000` if needed).
-4. Open a **second browser tab** (or another machine on the same LAN with the right host binding later) and send messages—both sides should see lines immediately.
+3. Open <http://localhost:4000> (override with `$env:PORT=3000` if needed).
+4. Open a **second browser tab** (or another machine on the same LAN with the right host binding
+   later) and send messages—both sides should see lines immediately.
 
 ## Concepts
 
-**Plain English:** A WebSocket keeps one pipe open so server and browser can push events without repeating HTTP request/response cycles—ideal for “callee accepted” and later “here is an ICE candidate” messages.
+**Plain English:** A WebSocket keeps one pipe open so server and browser can push events without
+repeating HTTP request/response cycles—ideal for "callee accepted" and later "here is an ICE
+candidate" messages.
 
 ## Layout
 

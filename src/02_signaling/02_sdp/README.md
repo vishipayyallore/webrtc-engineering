@@ -2,7 +2,8 @@
 
 ## Purpose
 
-I'm learning how browsers describe **what** they want to send (codecs, transports) and **how** to connect—before ICE finishes path selection.
+I'm learning how browsers describe **what** they want to send (codecs, transports) and **how** to
+connect—before ICE finishes path selection.
 
 ## Notes
 

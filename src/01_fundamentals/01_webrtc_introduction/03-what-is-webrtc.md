@@ -2,7 +2,8 @@
 
 ## Plain English
 
-WebRTC (**Web Real-Time Communication**) is a collection of browser APIs, protocols, and standards that allow applications to exchange **live data** with **low latency**.
+WebRTC (**Web Real-Time Communication**) is a collection of browser APIs, protocols, and standards
+that allow applications to exchange **live data** with **low latency**.
 
 The data may be:
 
@@ -14,7 +15,8 @@ The data may be:
 
 The "RTC" part means **real-time communication**.
 
-The goal is for the other side to receive updates shortly after they are sent rather than waiting for page refreshes, polling intervals, or manual synchronization.
+The goal is for the other side to receive updates shortly after they are sent rather than waiting
+for page refreshes, polling intervals, or manual synchronization.
 
 ---
 
@@ -40,7 +42,7 @@ I do not need to understand all of these immediately.
 
 This repository introduces them one step at a time.
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -73,7 +75,7 @@ flowchart LR
     SEC --> MEDIA
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
 Browser APIs
@@ -139,7 +141,7 @@ Media may be peer-to-peer.
 Infrastructure still exists.
 ```
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -175,7 +177,7 @@ flowchart LR
     T -. Assist .-> B
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
          Signaling
@@ -193,7 +195,7 @@ flowchart LR
 
 I use a simple mental model for every WebRTC connection.
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -223,7 +225,7 @@ flowchart LR
     C --> D
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
 Signaling
@@ -256,7 +258,7 @@ Consider a two-person telehealth consultation.
 
 The process looks like:
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -289,7 +291,7 @@ flowchart LR
     D --> M
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
 Patient

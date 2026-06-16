@@ -10,4 +10,5 @@ Repository-local helpers (**not** application code under `src/06_demos/` or `src
 | [coturn/](coturn/) | TURN / Coturn configs and notes |
 | [docker/](docker/) | Docker Compose and container helpers |
 
-**WebRTC apps** live under `src/06_demos/` and `src/08_projects/`. Root `package.json` supplies workspace-wide ESLint, Prettier, and TypeScript checks.
+**WebRTC apps** live under `src/06_demos/` and `src/08_projects/`. Root `package.json` supplies
+workspace-wide ESLint, Prettier, and TypeScript checks.

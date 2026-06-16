@@ -2,7 +2,9 @@
 
 ## Plain English
 
-When ICE cannot open a direct path—symmetric NAT, strict corporate firewalls, some cross-region cases—I need a **relay**. **TURN** sends media through a server both sides can reach. I pay bandwidth twice (in and out of the relay), but the call **completes**.
+When ICE cannot open a direct path—symmetric NAT, strict corporate firewalls, some cross-region
+cases—I need a **relay**. **TURN** sends media through a server both sides can reach. I pay
+bandwidth twice (in and out of the relay), but the call **completes**.
 
 ## When I plan for TURN
 

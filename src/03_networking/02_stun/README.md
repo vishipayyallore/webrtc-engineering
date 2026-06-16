@@ -2,11 +2,14 @@
 
 ## Plain English
 
-**STUN** answers: “What address does the rest of the internet think I’m on?” My laptop sits behind a home router with a **private** address; outsiders only see the router’s **public** address. STUN reflects a packet so I learn that public mapping.
+**STUN** answers: "What address does the rest of the internet think I'm on?" My laptop sits behind a
+home router with a **private** address; outsiders only see the router's **public** address. STUN
+reflects a packet so I learn that public mapping.
 
 ## Analogy I use
 
-It is like asking a mirror on the internet to tell me the address it sees—similar in spirit to visiting a “what is my IP” site, but standardized for WebRTC stacks.
+It is like asking a mirror on the internet to tell me the address it sees—similar in spirit to
+visiting a "what is my IP" site, but standardized for WebRTC stacks.
 
 ## What STUN does not do
 

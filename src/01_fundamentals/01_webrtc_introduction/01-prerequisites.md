@@ -4,7 +4,8 @@
 
 This repository teaches WebRTC, not general web development.
 
-I assume I already understand the basics of building web applications and can read JavaScript examples without needing every language feature explained from first principles.
+I assume I already understand the basics of building web applications and can read JavaScript
+examples without needing every language feature explained from first principles.
 
 When I forget details, I prefer referencing MDN or official documentation rather than re-teaching those topics here.
 
@@ -51,9 +52,10 @@ before beginning.
 
 Those topics are introduced gradually throughout the repository.
 
-I only need a rough understanding that devices communicate across networks and that routers, firewalls, and NATs can make direct communication difficult.
+I only need a rough understanding that devices communicate across networks and that routers,
+firewalls, and NATs can make direct communication difficult.
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -83,7 +85,7 @@ flowchart LR
     R --> B
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
 My Application
@@ -120,7 +122,7 @@ If Node.js feels rusty, I start with the signaling demos before moving into peer
 
 The repository is designed to build understanding incrementally.
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -153,7 +155,7 @@ flowchart LR
     D --> E
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
 Web Basics

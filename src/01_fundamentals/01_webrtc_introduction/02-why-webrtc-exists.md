@@ -40,7 +40,7 @@ As concurrency grows:
 * CPU usage increases
 * Infrastructure costs increase
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -67,7 +67,7 @@ flowchart LR
     S --> B
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
 User A
@@ -97,7 +97,7 @@ TCP guarantees delivery and ordering, which is ideal for:
 
 If a packet is lost, TCP pauses and retransmits before continuing.
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -122,7 +122,7 @@ flowchart LR
     UDP --> B["Keep Moving"]
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
 TCP
@@ -156,16 +156,18 @@ WebRTC provides a browser-safe way to use UDP-based real-time communication.
 
 ## The Design Goal
 
-Engineers wanted endpoints to exchange live data **without requiring a central relay for every media packet**, whenever the network allows it.
+Engineers wanted endpoints to exchange live data **without requiring a central relay for every
+media packet**, whenever the network allows it.
 
 Benefits I care about:
 
 * **Lower relay cost** when direct paths work.
 * **Shorter network paths** that may reduce latency.
 * **More efficient bandwidth usage** because media does not always need a middle hop.
-* **Less centralized inspection** of raw media (though signaling and TURN infrastructure still exist).
+* **Less centralized inspection** of raw media (though signaling and TURN infrastructure still
+  exist).
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -189,7 +191,7 @@ flowchart LR
     A <--> B
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
 User A  <========>  User B
@@ -220,7 +222,7 @@ Direct media when possible
 Practical fallbacks when necessary
 ```
 
-### Mermaid
+#### Mermaid
 
 ```mermaid
 %%{
@@ -250,7 +252,7 @@ flowchart TD
     D --> C
 ```
 
-### ASCII Fallback
+#### ASCII Fallback
 
 ```text
 Signaling

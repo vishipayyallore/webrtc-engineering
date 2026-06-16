@@ -42,7 +42,8 @@ flowchart LR
 
 I study WebSockets as a **bidirectional communication channel**.
 
-Many WebRTC applications use WebSockets for signaling because both sides need to exchange messages immediately during call setup.
+Many WebRTC applications use WebSockets for signaling because both sides need to exchange messages
+immediately during call setup.
 
 WebRTC itself does not require WebSockets, but WebSockets are one of the most common signaling transports.
 

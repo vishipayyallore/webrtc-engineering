@@ -2,7 +2,8 @@
 
 ## Purpose
 
-I'm learning how to ask the browser for camera and microphone access and attach tracks to a local preview — the first step before any peer connection.
+I'm learning how to ask the browser for camera and microphone access and attach tracks to a local
+preview — the first step before any peer connection.
 
 ## Run steps
 
@@ -17,11 +18,14 @@ npm install
 npm start
 ```
 
-*(Commands apply once app code is added.)*
+### Note
+
+Commands apply once app code is added.
 
 ## Concepts
 
-**Plain English:** `getUserMedia` is the API that returns a **MediaStream** — one or more tracks (audio/video) I can play locally or send to a peer later.
+**Plain English:** `getUserMedia` is the API that returns a **MediaStream** — one or more tracks
+(audio/video) I can play locally or send to a peer later.
 
 **Use case:** Joining a telehealth visit and checking my camera preview before the call connects.
 

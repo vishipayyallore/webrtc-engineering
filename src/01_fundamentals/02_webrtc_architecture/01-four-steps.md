@@ -121,7 +121,7 @@ Supporting infrastructure often includes:
 - STUN servers
 - TURN servers
 
-### Typical Failures
+### Typical Failures (Connecting)
 
 - Firewall restrictions
 - Blocked UDP traffic
@@ -148,7 +148,7 @@ Key agreement
 Secure connection
 ```
 
-### Typical Failures
+### Typical Failures (Securing)
 
 - Certificate fingerprint mismatches
 - Handshake failures
@@ -177,7 +177,7 @@ This may include:
 
 At this point, the application finally delivers value to users.
 
-### Typical Failures
+### Typical Failures (Communicating)
 
 - Packet loss
 - Insufficient bandwidth

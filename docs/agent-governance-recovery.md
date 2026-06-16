@@ -1,6 +1,7 @@
 # Agent Governance Recovery
 
-Use this guide when assistant governance files (copilot instructions, rules, skills, agents, or `CLAUDE.md`) have been corrupted, partially overwritten, or drifted out of sync.
+Use this guide when assistant governance files (copilot instructions, rules, skills, agents, or
+`CLAUDE.md`) have been corrupted, partially overwritten, or drifted out of sync.
 
 ## Primary: prevent damage
 

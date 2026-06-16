@@ -11,7 +11,8 @@ It answers:
 * How media is secured (DTLS)
 * ICE configuration needed to establish connectivity
 
-In WebRTC, SDP is exchanged through the **signaling channel** (WebSocket, SIP, HTTP, etc.), not over the media transport itself.
+In WebRTC, SDP is exchanged through the **signaling channel** (WebSocket, SIP, HTTP, etc.), not over
+the media transport itself.
 
 Think of SDP as a **capabilities negotiation document**.
 

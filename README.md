@@ -1,14 +1,19 @@
 # WebRTC Engineering
 
-A comprehensive hands-on repository for learning, experimenting with, and building real-time communication systems using WebRTC.
+A comprehensive hands-on repository for learning, experimenting with, and building real-time
+communication systems using WebRTC.
 
-This repository documents my journey from WebRTC fundamentals to production-grade architectures through structured learning, practical exercises, and real-world projects.
+This repository documents my journey from WebRTC fundamentals to production-grade architectures
+through structured learning, practical exercises, and real-world projects.
 
 ---
 
 ## Scope (read this first)
 
-This repository is **Swamy PKV's personal learning workspace only**. It is **not** courseware, a tutorial site, or material maintained for other learners. Content is written in a first-person learning voice for my own revision and practice. Do not reframe it for a general audience unless I explicitly ask.
+This repository is **Swamy PKV's personal learning workspace only**. It is **not** courseware, a
+tutorial site, or material maintained for other learners. Content is written in a first-person
+learning voice for my own revision and practice. Do not reframe it for a general audience unless I
+explicitly ask.
 
 ---
 

@@ -22,7 +22,6 @@ I'm building a clear mental model of what WebRTC is before I touch APIs in `06_d
 
 Synthesized study notes (my wording). Runnable code lives under `src/06_demos/` later in the path.
 
-
 <!-- No problem. Let me simplify it.
 
 You asked:
