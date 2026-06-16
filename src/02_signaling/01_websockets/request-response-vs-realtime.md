@@ -73,7 +73,7 @@ This separates signaling problems from media problems.
 
 ## Request–Response vs Real-Time Communication
 
-### Mermaid
+### Request-Response Model Diagram
 
 ```mermaid
 %%{
@@ -93,7 +93,7 @@ flowchart LR
     Server -->|Response| Client
 ```
 
-### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Client ---- Request ----> Server
@@ -142,7 +142,7 @@ A WebSocket connection is:
 
 Either side can send messages at any time.
 
-### Mermaid
+### WebSocket Bidirectional Connection Diagram
 
 ```mermaid
 flowchart LR
@@ -159,7 +159,7 @@ flowchart LR
     B <--> S
 ```
 
-### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Browser A <=========> Server
@@ -196,7 +196,7 @@ The signaling server is not merely a transport pipe.
 
 Its job is to route messages to the correct destination.
 
-### Mermaid
+### Message Routing Diagram
 
 ```mermaid
 flowchart TD
@@ -213,7 +213,7 @@ flowchart TD
     Server -->|Forward| Bob
 ```
 
-### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Alice
@@ -316,7 +316,7 @@ Broadcasting every message to every connected client does not scale.
 
 Instead, users belong to rooms or sessions.
 
-### Mermaid
+### Rooms and Sessions Diagram
 
 ```mermaid
 flowchart TD
@@ -339,7 +339,7 @@ flowchart TD
     Dave --> RoomB
 ```
 
-### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Room A
@@ -357,7 +357,7 @@ Messages remain within the room.
 
 ## Connection Lifecycle
 
-### Mermaid
+### Connection Lifecycle Diagram
 
 ```mermaid
 sequenceDiagram
@@ -373,7 +373,7 @@ sequenceDiagram
     Client->>Server: Disconnect
 ```
 
-### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Connect
@@ -414,7 +414,7 @@ Pong
 
 to verify the connection is still alive.
 
-### Mermaid
+### Ping-Pong Heartbeat Diagram
 
 ```mermaid
 sequenceDiagram
@@ -425,7 +425,7 @@ sequenceDiagram
     Client->>Server: Pong
 ```
 
-### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Server ---- Ping ----> Client
@@ -442,7 +442,7 @@ The same signaling server later forwards:
 * SDP answers
 * ICE candidates
 
-### Mermaid
+### WebRTC Message Forwarding Diagram
 
 ```mermaid
 flowchart TD
@@ -465,7 +465,7 @@ flowchart TD
     S -->|ICE Candidate| B
 ```
 
-### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Peer A

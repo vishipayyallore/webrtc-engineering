@@ -55,7 +55,7 @@ Those topics are introduced gradually throughout the repository.
 I only need a rough understanding that devices communicate across networks and that routers,
 firewalls, and NATs can make direct communication difficult.
 
-#### Mermaid
+### Network Boundaries Diagram
 
 ```mermaid
 %%{
@@ -85,7 +85,7 @@ flowchart LR
     R --> B
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 My Application
@@ -122,7 +122,7 @@ If Node.js feels rusty, I start with the signaling demos before moving into peer
 
 The repository is designed to build understanding incrementally.
 
-#### Mermaid
+### Learning Path Diagram
 
 ```mermaid
 %%{
@@ -155,7 +155,7 @@ flowchart LR
     D --> E
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Web Basics

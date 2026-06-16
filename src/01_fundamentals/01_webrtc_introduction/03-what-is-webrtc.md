@@ -42,7 +42,7 @@ I do not need to understand all of these immediately.
 
 This repository introduces them one step at a time.
 
-#### Mermaid
+### WebRTC Components Diagram
 
 ```mermaid
 %%{
@@ -75,7 +75,7 @@ flowchart LR
     SEC --> MEDIA
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Browser APIs
@@ -141,7 +141,7 @@ Media may be peer-to-peer.
 Infrastructure still exists.
 ```
 
-#### Mermaid
+### Peer-to-Peer with Infrastructure Diagram
 
 ```mermaid
 %%{
@@ -177,7 +177,7 @@ flowchart LR
     T -. Assist .-> B
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
          Signaling
@@ -195,7 +195,7 @@ flowchart LR
 
 I use a simple mental model for every WebRTC connection.
 
-#### Mermaid
+### Four Phases Diagram
 
 ```mermaid
 %%{
@@ -225,7 +225,7 @@ flowchart LR
     C --> D
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Signaling
@@ -258,7 +258,7 @@ Consider a two-person telehealth consultation.
 
 The process looks like:
 
-#### Mermaid
+### Telehealth Real-World Example Diagram
 
 ```mermaid
 %%{
@@ -291,7 +291,7 @@ flowchart LR
     D --> M
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Patient

@@ -40,7 +40,7 @@ As concurrency grows:
 * CPU usage increases
 * Infrastructure costs increase
 
-#### Mermaid
+### Server Relay at Scale Diagram
 
 ```mermaid
 %%{
@@ -67,7 +67,7 @@ flowchart LR
     S --> B
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 User A
@@ -97,7 +97,7 @@ TCP guarantees delivery and ordering, which is ideal for:
 
 If a packet is lost, TCP pauses and retransmits before continuing.
 
-#### Mermaid
+### TCP vs UDP for Real-Time Diagram
 
 ```mermaid
 %%{
@@ -122,7 +122,7 @@ flowchart LR
     UDP --> B["Keep Moving"]
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 TCP
@@ -167,7 +167,7 @@ Benefits I care about:
 * **Less centralized inspection** of raw media (though signaling and TURN infrastructure still
   exist).
 
-#### Mermaid
+### Direct Peer-to-Peer Media Diagram
 
 ```mermaid
 %%{
@@ -191,7 +191,7 @@ flowchart LR
     A <--> B
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 User A  <========>  User B
@@ -222,7 +222,7 @@ Direct media when possible
 Practical fallbacks when necessary
 ```
 
-#### Mermaid
+### WebRTC Infrastructure Stack Diagram
 
 ```mermaid
 %%{
@@ -252,7 +252,7 @@ flowchart TD
     D --> C
 ```
 
-#### ASCII Fallback
+**ASCII Fallback:**
 
 ```text
 Signaling

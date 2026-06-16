@@ -20,7 +20,9 @@ Think of SDP as a **capabilities negotiation document**.
 
 ## Connection Lifecycle
 
-### Mermaid
+### Connection Lifecycle Diagram
+
+#### Mermaid
 
 ```mermaid
 flowchart LR
@@ -34,7 +36,7 @@ flowchart LR
     DTLS --> SRTP
 ```
 
-### ASCII Fallback
+#### ASCII Diagram
 
 ```text
 SDP Negotiation
@@ -79,7 +81,9 @@ Glares (both sides offering simultaneously) require a negotiation policy; I lear
 
 ## Offer / Answer Flow
 
-### Mermaid
+### Offer Answer Sequence Diagram
+
+#### Mermaid
 
 ```mermaid
 sequenceDiagram
@@ -106,7 +110,7 @@ sequenceDiagram
     B-->>A: ICE Candidates
 ```
 
-### ASCII Fallback
+#### ASCII Diagram
 
 ```text
 Caller                  Callee
@@ -381,7 +385,9 @@ A browser-to-browser application may use a custom WebSocket signaling server.
 
 The signaling format changes, but the negotiation pattern remains the same.
 
-### Mermaid
+### SDP Negotiation Process Diagram
+
+#### Mermaid
 
 ```mermaid
 flowchart TD
@@ -397,7 +403,7 @@ flowchart TD
     D --> E
 ```
 
-### ASCII Fallback
+#### ASCII Diagram
 
 ```text
 Describe Capabilities
